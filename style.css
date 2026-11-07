@@ -1976,3 +1976,37 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,te
  body{padding-left:0!important;background:#fff!important}
  #memberCard .member-card{box-shadow:none!important;-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
 }
+
+
+/* POSITIONNEMENT DE LA VUE « VOIR MA CARTE » : contenu centré dans la page */
+#memberCard{
+  width:100%!important;
+  min-height:calc(100vh - 68px)!important;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  padding:clamp(28px,5vh,56px) clamp(18px,4vw,48px)!important;
+}
+#memberCard .head{
+  width:100%;
+  max-width:760px;
+  margin:0 auto 24px!important;
+  text-align:center!important;
+}
+#memberCard .member-card{
+  width:min(720px,100%)!important;
+  margin:0 auto!important;
+  align-self:center!important;
+}
+#memberCard .card-actions{
+  width:100%;
+  justify-content:center!important;
+  align-items:center!important;
+  margin:20px auto 0!important;
+}
+@media(max-width:700px){
+  #memberCard{min-height:calc(100vh - 62px)!important;padding:24px 14px!important}
+  #memberCard .head{margin-bottom:18px!important}
+  #memberCard .card-actions{flex-direction:row!important;flex-wrap:wrap}
+}
