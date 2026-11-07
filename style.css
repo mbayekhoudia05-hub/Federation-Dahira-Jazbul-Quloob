@@ -1899,3 +1899,73 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,te
     min-height:42px!important;max-height:42px!important;
   }
 }
+
+/* MODELE STANDARD DE CARTE — disposition paysage, sans décor personnalisé */
+#memberCard .member-card{
+ width:min(860px,100%)!important;min-height:0!important;aspect-ratio:1.62!important;
+ margin:0 auto!important;padding:18px!important;display:flex!important;flex-direction:column!important;
+ gap:0!important;overflow:hidden!important;border:0!important;border-radius:12px!important;
+ background:linear-gradient(135deg,#075c2d,#0a7c3d)!important;color:#fff!important;
+ box-shadow:0 12px 30px #063b2040!important;position:relative!important;isolation:auto!important;
+}
+#memberCard .member-card:before,#memberCard .member-card:after{display:none!important;content:none!important}
+#memberCard .member-card .card-top{
+ position:relative!important;display:flex!important;flex:0 0 58px!important;flex-direction:row!important;
+ align-items:center!important;justify-content:flex-start!important;gap:12px!important;width:100%!important;
+ height:58px!important;min-height:58px!important;padding:0 0 10px!important;margin:0!important;
+ border:0!important;border-bottom:1px solid #ffffff55!important;background:transparent!important;text-align:left!important;
+}
+#memberCard .member-card .card-top img{
+ position:static!important;display:block!important;width:48px!important;height:48px!important;
+ min-width:48px!important;max-width:48px!important;object-fit:cover!important;border:1px solid #fff!important;
+ border-radius:50%!important;padding:0!important;margin:0!important;box-shadow:none!important;
+}
+#memberCard .member-card .card-top strong{display:block!important;color:#fff!important;font-size:16px!important;line-height:1.15!important}
+#memberCard .member-card .card-top small{display:block!important;color:#fff!important;font-size:10px!important;margin-top:4px!important;padding:0!important;border:0!important;background:transparent!important}
+#memberCard .member-card .card-body{
+ position:relative!important;display:grid!important;flex:1 1 auto!important;
+ grid-template-columns:100px minmax(0,1fr) 86px!important;grid-template-rows:1fr!important;
+ gap:18px!important;align-items:center!important;width:100%!important;min-height:0!important;
+ padding:14px 0!important;margin:0!important;overflow:hidden!important;background:transparent!important;
+}
+#memberCard .member-card .card-photo{
+ display:block!important;position:static!important;grid-column:1!important;grid-row:1!important;
+ width:100px!important;height:122px!important;min-width:100px!important;max-width:100px!important;
+ object-fit:cover!important;margin:0!important;padding:0!important;border:1px solid #fff!important;
+ border-radius:4px!important;background:#fff!important;
+}
+#memberCard .member-card .card-info{
+ position:static!important;display:block!important;grid-column:2!important;grid-row:1!important;
+ width:auto!important;height:auto!important;min-width:0!important;max-width:none!important;
+ margin:0!important;padding:0!important;overflow:hidden!important;color:#fff!important;text-align:left!important;background:transparent!important;
+}
+#memberCard .member-card .card-info h3{margin:0 0 8px!important;padding:0 0 5px!important;border-bottom:1px solid #ffffff66!important;color:#fff!important;font-size:19px!important;line-height:1.15!important}
+#memberCard .member-card .card-info p{margin:5px 0!important;padding:0!important;color:#fff!important;font-size:11px!important;line-height:1.25!important;overflow-wrap:anywhere!important}
+#memberCard .member-card .card-info p b{color:#fff!important;font-weight:700!important;text-decoration:none!important}
+#memberCard .member-card .qrcode{
+ position:static!important;display:flex!important;grid-column:3!important;grid-row:1!important;
+ width:78px!important;height:78px!important;min-width:78px!important;max-width:78px!important;
+ min-height:78px!important;max-height:78px!important;margin:0!important;padding:5px!important;
+ transform:none!important;align-items:center!important;justify-content:center!important;
+ background:#fff!important;border:0!important;border-radius:4px!important;overflow:hidden!important;
+}
+#memberCard .member-card .qrcode img,#memberCard .member-card .qrcode canvas{
+ display:block!important;width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;object-fit:contain!important;
+}
+#memberCard .member-card .card-bottom{
+ position:relative!important;display:block!important;flex:0 0 auto!important;width:100%!important;height:auto!important;
+ min-height:0!important;margin:0!important;padding:8px 0 0!important;border:0!important;border-top:1px solid #ffffff55!important;
+ background:transparent!important;color:#fff!important;text-align:center!important;font-size:9px!important;line-height:1.2!important;
+}
+@media(max-width:800px){
+ #memberCard .member-card{width:100%!important;aspect-ratio:1.62!important;padding:12px!important}
+ #memberCard .member-card .card-top{flex-basis:46px!important;height:46px!important;min-height:46px!important;padding-bottom:7px!important}
+ #memberCard .member-card .card-top img{width:38px!important;height:38px!important;min-width:38px!important;max-width:38px!important}
+ #memberCard .member-card .card-top strong{font-size:13px!important}
+ #memberCard .member-card .card-body{grid-template-columns:76px minmax(0,1fr) 62px!important;gap:10px!important;padding:9px 0!important}
+ #memberCard .member-card .card-photo{width:76px!important;height:92px!important;min-width:76px!important;max-width:76px!important}
+ #memberCard .member-card .card-info h3{font-size:14px!important;margin-bottom:5px!important}
+ #memberCard .member-card .card-info p{font-size:8px!important;margin:3px 0!important}
+ #memberCard .member-card .qrcode{width:58px!important;height:58px!important;min-width:58px!important;max-width:58px!important;min-height:58px!important;max-height:58px!important;padding:4px!important}
+ #memberCard .member-card .card-bottom{font-size:7px!important;padding-top:5px!important}
+}
