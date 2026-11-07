@@ -1200,7 +1200,7 @@ async function handlePublicMember(){
   }
 
   $('publicMemberBox').innerHTML=`
-    <div class="verify-organization"><strong>DAHIRA JAZBUL QULOUB</strong><span>CELLULE DAKAR</span></div>
+    <div class="verify-organization"><strong>FÉDÉRATION DAHIRA JAZBUL QULOOB</strong><span>FÉDÉRATION DAHIRA JAZBUL QULOOB</span></div>
     <img src="${esc(m.photo_url||'logo.svg')}" alt="Photo">
     <h3>${esc(m.first_name)} ${esc(m.last_name)}</h3>
     <p><b>N° membre :</b> ${esc(m.member_number)}</p>
