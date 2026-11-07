@@ -1252,7 +1252,7 @@ function openMemberCardsPrint(members,title){
  try{
   const cardMarkup=members.map(memberCardPrintMarkup);
   const cards=Array.from({length:Math.ceil(cardMarkup.length/9)},(_,page)=>'<section class="print-sheet">'+cardMarkup.slice(page*9,(page+1)*9).join('')+'</section>').join('');
-  const stylesheet=new URL('style.css?v=20261107-first-standard-card-v1',location.href).href;
+  const stylesheet=new URL('style.css?v=20261107-first-standard-card-v2',location.href).href;
   w.document.open();
   w.document.write(`<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(title)}</title><link rel="stylesheet" href="${stylesheet}"><style>
 @page{size:A4 landscape;margin:10mm}
@@ -1280,7 +1280,7 @@ html,body{margin:0!important;padding:0!important;width:100%!important;background
 </style></head><body>${cards}<script>
 window.addEventListener('load',()=>{const imgs=[...document.images];Promise.all(imgs.map(img=>img.complete?Promise.resolve():new Promise(resolve=>{img.addEventListener('load',resolve,{once:true});img.addEventListener('error',resolve,{once:true})}))).then(()=>setTimeout(()=>window.print(),700))});
 window.addEventListener('afterprint',()=>window.close());
-<\\/script></body></html>`);
+<\/script></body></html>`);
   w.document.close();
  }catch(error){w.close();alert('Impossible de préparer l’impression : '+(error?.message||String(error)));}
 }
