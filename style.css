@@ -1794,3 +1794,65 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,te
  #memberCard .card-info p{font-size:10px!important}
  #memberCard .qrcode{grid-column:1 / -1!important;grid-row:2!important;width:76px!important;height:76px!important;min-width:76px!important;max-width:76px!important;min-height:76px!important;max-height:76px!important;justify-self:center!important}
 }
+
+
+/* ORIENTATION HORIZONTALE FIXE DE LA CARTE MEMBRE */
+#memberCard .member-card{
+  display:grid!important;
+  grid-template-columns:1fr!important;
+  grid-template-rows:auto minmax(0,1fr) auto!important;
+  width:min(760px,100%)!important;
+  aspect-ratio:1.75 / 1!important;
+  min-height:0!important;
+  height:auto!important;
+  padding:clamp(10px,2.2vw,22px)!important;
+  box-sizing:border-box!important;
+}
+#memberCard .card-top{grid-row:1!important;min-height:0!important;padding-bottom:8px!important}
+#memberCard .card-body{
+  grid-row:2!important;
+  display:grid!important;
+  grid-template-columns:110px minmax(0,1fr) 100px!important;
+  grid-template-rows:1fr!important;
+  align-items:center!important;
+  gap:clamp(8px,2vw,18px)!important;
+  padding:8px 0!important;
+  min-height:0!important;
+}
+#memberCard .card-photo{grid-column:1!important;grid-row:1!important;width:100px!important;height:118px!important;min-width:0!important;max-width:100px!important}
+#memberCard .card-info{grid-column:2!important;grid-row:1!important;min-width:0!important}
+#memberCard .qrcode{
+  grid-column:3!important;grid-row:1!important;
+  width:88px!important;height:88px!important;min-width:88px!important;max-width:88px!important;
+  min-height:88px!important;max-height:88px!important;
+}
+#memberCard .card-bottom{grid-row:3!important;padding-top:7px!important}
+@media(max-width:700px){
+  #memberCard .member-card{
+    width:100%!important;
+    aspect-ratio:1.75 / 1!important;
+    padding:8px!important;
+  }
+  #memberCard .card-top{gap:7px!important;padding-bottom:5px!important}
+  #memberCard .card-top img{width:34px!important;height:34px!important;min-width:34px!important;max-width:34px!important}
+  #memberCard .card-top strong{font-size:11px!important}
+  #memberCard .card-top small{font-size:8px!important;margin-top:2px!important}
+  #memberCard .card-body{
+    grid-template-columns:64px minmax(0,1fr) 54px!important;
+    grid-template-rows:1fr!important;
+    gap:6px!important;padding:5px 0!important;
+  }
+  #memberCard .card-photo{
+    grid-column:1!important;grid-row:1!important;
+    width:60px!important;height:76px!important;min-width:60px!important;max-width:60px!important;
+  }
+  #memberCard .card-info{grid-column:2!important;grid-row:1!important}
+  #memberCard .card-info h3{font-size:12px!important;margin-bottom:4px!important;padding-bottom:3px!important}
+  #memberCard .card-info p{font-size:8px!important;line-height:1.2!important;margin:3px 0!important}
+  #memberCard .qrcode{
+    grid-column:3!important;grid-row:1!important;justify-self:center!important;
+    width:48px!important;height:48px!important;min-width:48px!important;max-width:48px!important;
+    min-height:48px!important;max-height:48px!important;padding:3px!important;
+  }
+  #memberCard .card-bottom{font-size:8px!important;padding-top:4px!important}
+}
