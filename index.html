@@ -1,0 +1,526 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/svg+xml" href="./favicon.svg"><link rel="apple-touch-icon" href="./logo.jpeg"><title>FÉDÉRATION DAHIRA JAZBUL QULOOB</title><meta name="description" content="Plateforme officielle de la Fédération Dahira Jazbul Quloob : informations, chartes, annonces et espace des membres."><meta name="robots" content="index, follow"><link rel="canonical" href="https://mbayekhoudia05-hub.github.io/Federation-Dahira-Jazbul-Quloob/"><meta property="og:type" content="website"><meta property="og:title" content="FÉDÉRATION DAHIRA JAZBUL QULOOB"><meta property="og:description" content="Informations, chartes, annonces et espace des membres du Dahira Jazbul Quloub — Fédération."><meta property="og:url" content="https://mbayekhoudia05-hub.github.io/Federation-Dahira-Jazbul-Quloob/"><link rel="stylesheet" href="style.css?v=20261105-qr-16-v12"><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script><script src="config.js"></script><script defer src="app.js?v=20261105-natal-cleanup-v3"></script></head><body>
+<aside id="appSidebar" class="app-sidebar" aria-label="Navigation principale">
+  <a class="brand" href="#accueil"><img src="logo.jpeg" alt="Logo du Daara"><span><b>FÉDÉRATION DAHIRA JAZBUL QULOOB</b><small>Plateforme du Dahira</small></span></a>
+  <div class="sidebar-caption">MENU PRINCIPAL</div>
+  <nav id="mainNavigation">
+    <a href="#accueil">⌂ <span>Accueil</span></a>
+    <a href="#contenus">▤ <span>Contenus publics</span></a>
+    <a href="#dahiraInformation">ℹ <span>Informations du Dahira</span></a>
+    <a href="#dahiraCharters">📜 <span>Chartes du Dahira</span></a>
+    <a href="#admin" id="adminNav" class="hidden" data-admin-target="admin">⚙ <span>Gérer les contenus</span></a>
+    <a href="#annonces">▣ <span>Annonces</span></a>
+    <a href="#adminDashboard" id="dashboardNav" class="hidden" data-admin-target="adminDashboard">▦ <span>Tableau de bord</span></a>
+    <a href="#members" id="membersNav" class="hidden" data-admin-target="members">♙ <span>Membres</span></a>
+    <a href="#commissions" id="commissionsNav" class="hidden" data-admin-target="commissions">♧ <span>Commissions</span></a>
+    <a href="#contributions" id="contributionsNav" class="hidden" data-admin-target="contributions">₣ <span>Cotisations</span></a>
+    <a href="#financeDashboard" id="financeNav" class="hidden" data-admin-target="financeDashboard">▥ <span>Finances</span></a>
+    <a href="#posters" id="postersNav" class="hidden" data-admin-target="posters">🎨 <span>Générateur d’affiches</span></a>
+    <a href="#unpaidMembers" id="unpaidNav" class="hidden" data-admin-target="unpaidMembers">◷ <span>Suivi paiements</span></a>
+    <a href="#paymentTransactions" id="paymentsNav" class="hidden" data-admin-target="paymentTransactions">▣ <span>Paiements</span></a>
+    <a href="#membershipRequests" id="membershipRequestsNav" class="hidden" data-admin-target="membershipRequests">✉ <span>Demandes d’adhésion</span> <b id="membershipRequestBadge" class="request-count hidden">0</b></a>
+  </nav>
+  <div class="sidebar-account"><button id="loginBtn">Connexion</button><button id="logoutBtn" class="hidden">Déconnexion</button></div>
+</aside>
+<div id="sidebarBackdrop" class="sidebar-backdrop"></div>
+<header class="topbar">
+  <button type="button" id="sidebarToggle" class="sidebar-toggle" aria-label="Masquer le menu" aria-expanded="true">☰</button>
+  <div class="topbar-title"><strong>FÉDÉRATION DAHIRA JAZBUL QULOOB</strong><small>Plateforme du Dahira</small></div>
+</header>
+<script>
+(function(){
+  const body=document.body, toggle=document.getElementById('sidebarToggle');
+  const backdrop=document.getElementById('sidebarBackdrop');
+  const sidebar=document.getElementById('appSidebar');
+  if(!toggle||!sidebar||!backdrop)return;
+  function setOpen(open){
+    if(window.innerWidth<=800){
+      body.classList.toggle('sidebar-mobile-open',open);
+    }else{
+      body.classList.toggle('sidebar-collapsed',!open);
+    }
+    toggle.setAttribute('aria-expanded',String(open));
+    toggle.setAttribute('aria-label',open?'Masquer le menu':'Afficher le menu');
+  }
+  toggle.addEventListener('click',()=>{
+    const isOpen=window.innerWidth<=800
+      ? body.classList.contains('sidebar-mobile-open')
+      : !body.classList.contains('sidebar-collapsed');
+    setOpen(!isOpen);
+  });
+  backdrop.addEventListener('click',()=>setOpen(false));
+  sidebar.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>{if(window.innerWidth<=800)setOpen(false)}));
+  window.addEventListener('resize',()=>{if(window.innerWidth>800)body.classList.remove('sidebar-mobile-open')});
+})();
+</script>
+<main>
+<section id="accueil" class="hero"><div><span class="badge">ACCÈS GRATUIT</span><h1>Bienvenue sur <em>FÉDÉRATION DAHIRA JAZBUL QULOOB</em></h1><p>Khassaïdes, audios, vidéos, cours et annonces du Dahira au même endroit.</p><button class="primary" onclick="document.querySelector('#contenus').scrollIntoView()">Explorer</button></div><img class="hero-logo" src="logo.jpeg"></section>
+
+<section id="contenus" class="section"><div class="head"><span>RESSOURCES</span><h2>Contenus du Dahira</h2></div><div id="contentGrid" class="grid"><div class="loading">Chargement…</div></div></section>
+
+<section id="dahiraInformation" class="section"><div class="head"><span>LE DAHIRA</span><h2>Informations du Dahira</h2><p>Présentation, mission, organisation et activités du FÉDÉRATION DAHIRA JAZBUL QULOOB.</p></div><div id="dahiraInformationGrid" class="grid"><div class="loading">Chargement…</div></div></section>
+
+<section id="dahiraCharters" class="section alt"><div class="head"><span>RÈGLES DE VIE</span><h2>Chartes du Dahira</h2><p>Consultez les chartes et les règles de fonctionnement du Dahira.</p></div><div id="dahiraChartersGrid" class="grid"><div class="loading">Chargement…</div></div></section>
+
+<section id="admin" class="section hidden"><div class="head"><span>ADMINISTRATION</span><h2>Gérer les contenus</h2></div><form id="contentForm"><label>Type<select id="type"><option value="khasside">Khassaïde</option><option value="audio">Audio</option><option value="video">Vidéo</option><option value="cours">Cours</option><option value="annonce">Annonce</option><option value="information">Information du Dahira</option><option value="charte">Charte du Dahira</option></select></label><label>Titre<input id="title" required></label><label>Description<textarea id="description"></textarea></label><label for="charterText">Texte intégral du règlement (pour une charte)<textarea id="charterText" rows="18" placeholder="Collez ici le texte officiel complet du règlement. Le texte sera affiché directement dans la plateforme."></textarea><small>Le texte est conservé tel quel et visible par les membres et l’administrateur.</small></label><label class="pdf-upload-label">📄 Ajouter un document PDF (facultatif, notamment pour les chartes)<input id="contentPdf" type="file" accept="application/pdf,.pdf"><small>PDF uniquement, 15 Mo maximum. Le document sera consultable par tous les visiteurs.</small></label><p id="pdfCurrentInfo" class="pdf-current-info">PDF facultatif — 15 Mo maximum.</p><label>Lien du contenu (facultatif)<input id="external_url" type="url" placeholder="https://..."></label><input id="editingContentId" type="hidden"><div class="button-row"><button class="primary" id="contentSubmitBtn" type="submit">Publier</button><button class="secondary hidden" id="cancelContentEditBtn" type="button">Annuler la modification</button></div><p id="formMessage"></p></form><div class="head content-admin-list-head"><h2>Contenus publiés</h2><p>Modifie un contenu existant ou ajoute une nouvelle information/charte.</p></div><div id="adminContentRows" class="content-admin-list"><div class="loading">Chargement…</div></div><div class="head content-admin-list-head"><h2>Consultation des chartes</h2><p>Les chartes publiées sont consultables ici par l’administrateur, avec lecture PDF et téléchargement.</p></div><div id="adminChartersList" class="content-admin-list"><div class="loading">Chargement des chartes…</div></div></section>
+
+<section id="annonces" class="section alt"><div class="head"><span>INFORMATIONS</span><h2>Annonces</h2></div><div id="announcementGrid" class="grid"></div></section>
+
+<section id="membershipFormSection" class="section">
+  <div class="head">
+    <span>NOUS REJOINDRE</span>
+    <h2>Demande d’adhésion</h2>
+    <p>Remplissez ce formulaire pour demander votre adhésion au Daara Jazbul Qulob.</p>
+  </div>
+
+  <form id="membershipRequestForm" class="member-form">
+    <label for="requestFirstName">Prénom *</label>
+    <input id="requestFirstName" type="text" required maxlength="100">
+
+    <label for="requestLastName">Nom *</label>
+    <input id="requestLastName" type="text" required maxlength="100">
+
+    <label for="requestPhone">Téléphone *</label>
+    <input id="requestPhone" type="tel" required maxlength="30">
+
+    <label for="requestEmail">Adresse e-mail *</label>
+    <input id="requestEmail" type="email" required maxlength="150" autocomplete="email">
+    <small>Cette adresse servira à créer votre compte personnel après validation de votre adhésion.</small>
+
+    <label for="requestCommission">Commission souhaitée *</label>
+    <select id="requestCommission" required>
+      <option value="">Choisir une commission *</option>
+      <option value="eefa047b-58cf-4883-b01b-e0ba42adbb12">Audiovisuelle</option>
+      <option value="7e188617-841d-4b49-a6c9-c75155c176eb">Communication</option>
+      <option value="4f81fa1a-9f6c-4b2b-a844-c2174b289243">Culturelle</option>
+      <option value="32cca276-68bd-46db-b03e-4b6fbdf219d0">Finance</option>
+      <option value="99275d1e-6258-41d5-90cd-1d44a1989b0d">Organisation</option>
+      <option value="e709a2be-ea28-4804-82f7-47ab0968e59d">Relations extérieures et internationales</option>
+      <option value="5435cb08-68cd-4c89-950f-141cf93c8460">Santé</option>
+      <option value="120d77bb-b8df-4528-969a-965501bf526f">Pédagogique</option>
+      <option value="002d4245-34df-4cb3-9b2a-a21c6db1b6c9">Restauration</option>
+      <option value="3d177269-7e4e-4cb6-b031-28e4fea901de">Scientifique</option>
+
+    </select>
+
+    <label for="requestNote">Message (facultatif)</label>
+    <textarea id="requestNote" rows="3" maxlength="1000"
+      placeholder="Informations complémentaires"></textarea>
+
+    <button type="submit" class="primary">Envoyer ma demande</button>
+    <p class="form-help">Après l’envoi, l’administrateur étudiera votre demande. Si elle est acceptée, créez votre compte avec cette même adresse e-mail depuis le bouton « Connexion », puis « Créer un compte gratuit ». Confirmez votre adresse e-mail et reconnectez-vous pour ouvrir votre espace membre.</p>
+    <p id="membershipRequestMessage" role="status"></p>
+  </form>
+</section>
+
+<section id="adminDashboard" class="section hidden"><div class="head"><span>ESPACE ADMINISTRATEUR</span><h2>Tableau de bord</h2><p>Bienvenue dans la gestion de votre Dahira. Choisissez une rubrique dans le menu à gauche.</p></div><div class="stats contribution-stats"><div class="stat"><strong id="dashMembers">0</strong><span>Membres actifs</span></div><div class="stat"><strong id="dashContributions">0 FCFA</strong><span>Encaissé ce mois</span></div><div class="stat"><strong id="dashPending">0</strong><span>Demandes à traiter</span></div><div class="stat"><strong id="dashPayments">0</strong><span>Paiements en attente</span></div></div></section>
+
+<section id="members" class="section alt hidden"><div class="head"><span>ESPACE ADMINISTRATEUR</span><h2>Gestion des membres</h2><p>Ajoute les membres, leur photo et génère leur carte avec QR Code.</p><button type="button" class="primary" data-action="export-members">📥 Exporter la liste des membres (CSV)</button> <button type="button" class="primary" id="printAllMemberCardsBtn">🖨️ Imprimer toutes les cartes</button></div><div class="stats"><div class="stat"><strong id="memberCount">0</strong><span>Membres actifs</span></div><div class="stat"><strong id="totalMemberCount">0</strong><span>Total membres</span></div></div><form id="memberForm" class="member-form"><h3>Ajouter un membre</h3><div class="form-row"><label>Prénom<input id="memberFirstName" required></label><label>Nom<input id="memberLastName" required></label></div><div class="form-row"><label>Téléphone<input id="memberPhone" type="tel" placeholder="77 000 00 00"></label><label>Email<input id="memberEmail" type="email"></label></div><label for="memberCommission">Commission du membre (facultatif)</label><select id="memberCommission"><option value="">Aucune commission (facultatif)</option></select><label class="photo-upload-label">📷 Photo du membre<input id="memberPhoto" type="file" accept="image/jpeg,image/png,image/webp"><small>Choisis une photo JPG, PNG ou WEBP (5 Mo maximum). Elle sera automatiquement enregistrée sur la carte.</small></label><div id="photoPreviewWrap" class="photo-preview hidden"><img id="photoPreview" src="logo.jpeg" alt="Aperçu"><div><strong>Aperçu de la photo</strong><span id="photoPreviewName"></span></div></div><button class="primary">Créer le membre</button><p id="memberMessage"></p></form><div class="member-table-wrap"><table><thead><tr><th>N° membre</th><th>Nom</th><th>Commission</th><th>Téléphone</th><th>Date</th><th>Statut</th><th>Actions</th></tr></thead><tbody id="memberRows"><tr><td colspan="7">Aucun membre.</td></tr></tbody></table></div></section>
+
+<section id="commissions" class="section hidden">
+  <div class="head"><span>ESPACE ADMINISTRATEUR</span><h2>Gestion des commissions</h2><p>Organise les commissions du Dahira et désigne leurs responsables.</p><button type="button" class="primary" data-action="export-commissions">📥 Exporter les commissions (CSV)</button></div>
+  <form id="commissionForm" class="member-form">
+    <h3>Ajouter une commission</h3>
+    <div class="form-row">
+      <label>Nom<input id="commissionName" maxlength="80" required placeholder="Nom de la commission"></label>
+      <label>Description<textarea id="commissionDescription" rows="3" maxlength="1000" placeholder="Décris la mission, les responsabilités et les activités de la commission"></textarea></label>
+    </div>
+    <button class="primary" type="submit">Ajouter la commission</button>
+    <p id="commissionMessage"></p>
+  </form>
+  <div id="commissionRows" class="commissions-grid"><div class="loading">Chargement des commissions…</div></div>
+</section>
+
+<section id="contributions" class="section hidden">
+  <div class="head">
+    <span>ESPACE ADMINISTRATEUR</span>
+    <h2>Gestion des cotisations</h2>
+    <p>Enregistre les cotisations des membres et consulte l'historique des paiements.</p>
+  </div>
+
+  <div class="stats contribution-stats">
+    <div class="stat">
+      <strong id="contributionMonthTotal">0 FCFA</strong>
+      <span>Encaissé ce mois</span>
+    </div>
+    <div class="stat">
+      <strong id="contributionMonthCount">0</strong>
+      <span>Paiements ce mois</span>
+    </div>
+    <div class="stat">
+      <strong id="contributionPaidCount">0</strong>
+      <span>Membres ayant payé ce mois</span>
+    </div>
+    <div class="stat">
+      <strong id="contributionUnpaidCount">0</strong>
+      <span>Membres actifs non payés</span>
+    </div>
+  </div>
+
+  <form id="contributionForm" class="member-form">
+    <h3>Ajouter une cotisation</h3>
+    <div class="form-row">
+      <label>Membre
+        <select id="contributionMember" required>
+          <option value="">Sélectionner un membre</option>
+        </select>
+      </label>
+      <label>Mois
+        <input id="contributionMonth" type="month" required>
+      </label>
+      <label>Catégorie de cotisation
+        <select id="contributionCategory" required>
+          <option value="mensualite">Mensualité</option>
+          <option value="tombe_dahira">Tombe Dahira</option>
+          <option value="chasse">Chasse</option>
+          <option value="divers">Divers</option>
+        </select>
+      </label>
+    </div>
+    <div class="form-row">
+      <label>Montant (FCFA)
+        <input id="contributionAmount" type="number" min="1" step="1" placeholder="5000" required>
+      </label>
+      <label>Mode de paiement
+        <select id="contributionMethod" required>
+          <option value="especes">Espèces</option>
+          <option value="wave">Wave</option>
+          <option value="orange_money">Orange Money</option>
+        </select>
+      </label>
+    </div>
+    <div class="form-row">
+      <label>Référence (facultatif)
+        <input id="contributionReference" placeholder="Référence de transaction">
+      </label>
+      <label>Note (facultatif)
+        <input id="contributionNote" placeholder="Ex. Cotisation mensuelle">
+      </label>
+    </div>
+    <button class="primary">Enregistrer la cotisation</button>
+    <p id="contributionMessage"></p>
+  </form>
+
+  <div class="contribution-history">
+    <div class="history-heading">
+      <div><h3>Historique des cotisations</h3><p>Recherche les versements par membre, mois, catégorie ou statut.</p></div>
+      <button type="button" class="secondary" id="contributionFiltersReset">Réinitialiser les filtres</button>
+    </div>
+    <div class="contribution-filters">
+      <label>Rechercher un membre<input id="contributionSearch" type="search" placeholder="Nom ou numéro de membre"></label>
+      <label>Mois<input id="contributionHistoryMonth" type="month"></label>
+      <label>Catégorie<select id="contributionHistoryCategory">
+        <option value="">Toutes les catégories</option><option value="mensualite">Mensualité</option><option value="tombe_dahira">Tombe Dahira</option><option value="chasse">Chasse</option><option value="divers">Divers</option>
+      </select></label>
+      <label>Statut<select id="contributionHistoryStatus"><option value="">Tous les statuts</option><option value="paid">Payé</option><option value="pending">En attente</option></select></label>
+    </div>
+    <div class="member-table-wrap">
+      <table>
+        <thead><tr><th>Membre</th><th>Mois</th><th>Catégorie</th><th>Montant</th><th>Mode</th><th>Référence</th><th>Date</th><th>Actions</th></tr></thead>
+        <tbody id="contributionRows"><tr><td colspan="8">Chargement des cotisations…</td></tr></tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="financeDashboard" class="section hidden">
+  <div class="head">
+    <span>ESPACE ADMINISTRATEUR</span>
+    <h2>📊 Tableau de bord financier</h2>
+    <p>Suivi global des cotisations, paiements et membres.</p>
+  </div>
+
+  <div class="stats contribution-stats">
+    <div class="stat"><strong id="financeTotal">0 FCFA</strong><span>Total encaissé</span></div>
+    <div class="stat"><strong id="financeMonth">0 FCFA</strong><span>Encaissé ce mois</span></div>
+    <div class="stat"><strong id="financeWave">0 FCFA</strong><span>Via Wave</span></div>
+    <div class="stat"><strong id="financeOrange">0 FCFA</strong><span>Via Orange Money</span></div>
+    <div class="stat"><strong id="financeCategory_mensualite">0 FCFA</strong><span>Mensualité</span></div>
+    <div class="stat"><strong id="financeCategory_tombe_dahira">0 FCFA</strong><span>Tombe Dahira</span></div>
+    <div class="stat"><strong id="financeCategory_chasse">0 FCFA</strong><span>Chasse</span></div>
+    <div class="stat"><strong id="financeCategory_divers">0 FCFA</strong><span>Divers</span></div>
+  </div>
+
+  <div class="member-form">
+    <h3>🔎 Recherche et suivi</h3>
+    <div class="form-row">
+      <label>Membre
+        <select id="financeMemberFilter">
+          <option value="">Tous les membres</option>
+        </select>
+      </label>
+      <label>Mois
+        <input id="financeMonthFilter" type="month">
+      </label>
+      <label>Catégorie
+        <select id="financeCategoryFilter">
+          <option value="">Toutes les catégories</option>
+          <option value="mensualite">Mensualité</option>
+          <option value="tombe_dahira">Tombe Dahira</option>
+          <option value="chasse">Chasse</option>
+          <option value="divers">Divers</option>
+        </select>
+      </label>
+    </div>
+    <div class="button-row">
+      <button type="button" class="secondary" id="financeResetBtn">Réinitialiser</button>
+      <button type="button" class="primary" id="financeExportBtn">📥 Exporter CSV</button>
+    </div>
+  </div>
+
+  <div class="member-table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Membre</th>
+          <th>Mois</th>
+          <th>Catégorie</th>
+          <th>Montant</th>
+          <th>Mode</th>
+          <th>Date</th>
+          <th>Reçu</th>
+        </tr>
+      </thead>
+      <tbody id="financeRows">
+        <tr><td colspan="6">Aucune donnée.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="posters" class="section hidden">
+ <div class="head"><span>COMMUNICATION</span><h2>🎨 Générateur d’affiches</h2><p>Créez une affiche pour une rencontre ou une activité du Daara, puis téléchargez-la pour la partager.</p></div>
+ <div class="poster-maker-grid">
+  <form id="posterForm" class="card poster-controls">
+   <h3>Informations de l’événement</h3>
+   <label>Titre de l’événement<input id="posterTitle" type="text" maxlength="90" placeholder="Ex. Grande journée de récital" required></label>
+   <label>Message complémentaire<input id="posterSubtitle" type="text" maxlength="140" placeholder="Ex. Vous êtes cordialement invités"></label>
+   <label>Lieu<input id="posterPlace" type="text" maxlength="100" placeholder="Adresse ou lieu de la rencontre" required></label>
+   <div class="poster-fields-two"><label>Date<input id="posterDate" type="date" required></label><label>Heure<input id="posterTime" type="time" required></label></div>
+   <h3>Photos de l’affiche</h3>
+   <label>Logo du Daara<input id="posterLogo" type="file" accept="image/*"><small>Le logo actuel du site sera utilisé si aucun fichier n’est choisi.</small></label>
+   <label>Photo de l’événement / de l’invité<input id="posterEventPhoto" type="file" accept="image/*"><small>Facultatif.</small></label>
+   <label>Photo du marabout<input id="posterMaraboutPhoto" type="file" accept="image/*"><small>Facultatif.</small></label>
+   <div class="button-row"><button type="button" class="primary" id="posterDownloadBtn">⬇ Télécharger l’affiche (PNG)</button><button type="button" class="secondary" id="posterResetBtn">Réinitialiser</button></div>
+   <p id="posterMessage" role="status"></p>
+  </form>
+  <div class="card poster-preview-card"><h3>Aperçu de l’affiche</h3><p>Format portrait prêt à partager sur WhatsApp et les réseaux sociaux.</p><canvas id="posterCanvas" width="1080" height="1350" aria-label="Aperçu de l’affiche générée"></canvas></div>
+ </div>
+</section>
+
+<section id="unpaidMembers" class="section hidden">
+  <div class="head"><span>ESPACE ADMINISTRATEUR</span>
+  <h2>📅 Suivi des cotisations</h2>
+  <p>Vérifie les membres ayant payé ou non pour un mois donné.</p></div>
+  <div class="member-form"><div class="form-row">
+    <label>Mois à contrôler<input type="month" id="unpaidMonth"></label>
+    <label>Recherche<input type="text" id="unpaidSearch" placeholder="Nom ou numéro membre"></label>
+  </div></div>
+  <div class="stats contribution-stats">
+    <div class="stat"><strong id="paidMembersCount">0</strong><span>À jour</span></div>
+    <div class="stat"><strong id="unpaidMembersCount">0</strong><span>Non payés</span></div>
+    <div class="stat"><strong id="checkedMembersCount">0</strong><span>Membres actifs</span></div>
+  </div>
+  <div class="member-table-wrap"><table><thead><tr>
+    <th>Membre</th><th>Mois</th><th>Statut</th><th>Montant payé</th><th>Action</th>
+  </tr></thead><tbody id="unpaidRows"><tr><td colspan="5">Aucune donnée.</td></tr></tbody></table></div>
+</section>
+
+<section id="paymentTransactions" class="section hidden">
+  <div class="head"><span>ESPACE ADMINISTRATEUR</span>
+  <h2>💳 Transactions de paiement</h2>
+  <p>Préparation sécurisée des paiements Wave et Orange Money.</p></div>
+
+  <div class="stats contribution-stats">
+    <div class="stat"><strong id="pendingPayments">0</strong><span>En attente</span></div>
+    <div class="stat"><strong id="confirmedPayments">0 FCFA</strong><span>Confirmé</span></div>
+    <div class="stat"><strong id="cancelledPayments">0</strong><span>Annulé</span></div>
+  </div>
+
+  <div class="member-form">
+    <h3>➕ Enregistrer une transaction</h3>
+    <form id="paymentTransactionForm">
+      <div class="form-row">
+        <label>Membre<select id="paymentMember" required><option value="">Choisir un membre</option></select></label>
+        <label>Montant (FCFA)<input id="paymentAmount" type="number" min="1" required></label>
+      </div>
+      <div class="form-row">
+        <label>Moyen de paiement
+          <select id="paymentMethod" required>
+            <option value="wave">🌊 Wave</option>
+            <option value="orange_money">🟠 Orange Money</option>
+          </select>
+        </label>
+        <label>Référence
+          <input id="paymentReference" placeholder="Référence de transaction">
+        </label>
+        <label>Catégorie de cotisation
+          <select id="paymentCategory" required>
+            <option value="mensualite">Mensualité</option>
+            <option value="tombe_dahira">Tombe Dahira</option>
+            <option value="chasse">Chasse</option>
+            <option value="divers">Divers</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="payment-instructions">
+        <h3>📲 Envoyer votre cotisation</h3>
+        <p>🌊 <strong>Wave :</strong> 761 263 937</p>
+        <p>🟠 <strong>Orange Money :</strong> 788 301 558</p>
+        <p>Après le transfert, indiquez la référence de la transaction.
+        Votre paiement sera validé après vérification par l'administrateur.</p>
+      </div>
+
+      <div class="form-row">
+        <label>Mois de cotisation
+          <input id="paymentMonth" type="month" required>
+        </label>
+        <div class="payment-status-field">
+          <strong>📌 Statut initial : EN ATTENTE</strong>
+          <small>La transaction ne sera confirmée qu'après vérification du paiement par l'administrateur.</small>
+          <input type="hidden" id="paymentStatus" value="pending">
+        </div>
+      </div>
+      <label>Note<textarea id="paymentNote" rows="2" placeholder="Information complémentaire"></textarea></label>
+      <button class="primary" type="submit">Enregistrer la transaction</button>
+    </form>
+  </div>
+
+  <div class="member-table-wrap">
+    <table><thead><tr><th>Membre</th><th>Montant</th><th>Mode</th><th>Catégorie</th><th>Référence</th><th>Mois</th><th>Statut</th><th>Date</th></tr></thead>
+    <tbody id="paymentTransactionRows"><tr><td colspan="7">Aucune transaction.</td></tr></tbody></table>
+  </div>
+</section>
+
+<section id="membershipRequests" class="section hidden">
+  <div class="head">
+    <span>ADHÉSIONS</span>
+    <h2>Demandes d’adhésion</h2>
+    <p>Examine les demandes et valide les futurs membres.</p>
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Nom</th>
+          <th>Téléphone</th>
+          <th>Email</th>
+          <th>Commission choisie</th>
+          <th>Statut</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="membershipRequestRows">
+        <tr>
+          <td colspan="6">Les demandes apparaîtront ici.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="memberCard" class="section card-section hidden"><div class="head"><span>CARTE DE MEMBRE</span><h2>Carte numérique</h2><p id="cardIntro"></p></div><div class="member-card" id="printCard"><img class="card-background" src="carte-fond-nettoye.jpg" alt="Modèle original de la carte membre"><div class="card-photo-cleanup" aria-hidden="true"></div><div class="card-photo-frame"><img id="cardPhoto" class="card-photo" alt="Photo du membre"></div><div class="card-info"><h3 id="cardName">—</h3><p><b>ID N° :</b> <span id="cardNumber">—</span></p><p><b>Tél. :</b> <span id="cardPhone">—</span></p><p><b>Commission :</b> <span id="cardCommission">Aucune commission</span></p><p><b>Fonction :</b> <span id="cardCommissionRole">—</span></p><p><b>Mission :</b> <span id="cardCommissionDescription">—</span></p><p><b>Adhésion :</b> <span id="cardDate">—</span></p><p><b>Statut :</b> <span id="cardStatus">—</span></p></div><div id="qrcode" class="qrcode" aria-hidden="true"></div></div><div class="card-actions"><button class="primary" id="printCardBtn">🖨️ Imprimer / PDF</button><button class="secondary" id="closeCardBtn">Fermer</button></div></section>
+
+<section id="memberPublic" class="section hidden"><div class="head"><span>VÉRIFICATION</span><h2>Carte de membre</h2></div><div id="publicMemberBox" class="verify-box">Chargement…</div></section>
+
+<section id="memberDashboard" class="section hidden">
+  <div class="head">
+    <span>ESPACE PERSONNEL</span>
+    <h2>Bienvenue, <span id="memberWelcome">Membre</span></h2>
+    <p>Consultez vos informations et suivez votre situation au sein du Dahira.</p>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><strong id="myMemberNumber">—</strong><span>Mon numéro</span></div>
+    <div class="stat"><strong id="myTotalPaid">0 FCFA</strong><span>Total cotisé</span></div>
+    <div class="stat"><strong id="myPaymentCount">0</strong><span>Paiements enregistrés</span></div>
+  </div>
+
+  <div class="card">
+    <h3>👤 Mon profil</h3>
+    <p><b>Nom :</b> <span id="myMemberName">—</span></p>
+    <p><b>Téléphone :</b> <span id="myMemberPhone">—</span></p>
+    <p><b>E-mail :</b> <span id="myMemberEmail">—</span></p>
+    <p><b>Date d'adhésion :</b> <span id="myMemberDate">—</span></p>
+    <p><b>Statut :</b> <span id="myMemberStatus">—</span></p>
+    <button type="button" class="primary" id="myMemberCardBtn">🎫 Voir ma carte de membre</button>
+  </div>
+
+  <div class="card">
+    <h3>♧ Ma commission</h3>
+    <p><b>Commission :</b> <span id="myCommissionName">Chargement…</span></p>
+    <p><b>Fonction :</b> <span id="myCommissionRole">—</span></p>
+    <p id="myCommissionDescription">Chargement de la description…</p>
+  </div>
+
+  <div class="card">
+    <h3>📚 Les commissions du Dahira</h3>
+    <div id="memberAllCommissions">Chargement des commissions…</div>
+  </div>
+
+  <div class="card">
+    <h3>💰 Mes cotisations</h3>
+    <div class="member-table-wrap">
+      <table>
+        <thead><tr><th>Mois</th><th>Catégorie</th><th>Montant</th><th>Mode</th><th>Statut</th><th>Date</th></tr></thead>
+        <tbody id="myContributionRows"><tr><td colspan="5">Chargement…</td></tr></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>💳 Mes transactions</h3>
+    <div class="member-table-wrap">
+      <table>
+        <thead><tr><th>Montant</th><th>Catégorie</th><th>Mode</th><th>Référence</th><th>Statut</th></tr></thead>
+        <tbody id="myPaymentRows"><tr><td colspan="4">Chargement…</td></tr></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>📢 Signaler une erreur à l'administrateur</h3>
+    <form id="memberReportForm">
+      <input id="memberReportSubject" placeholder="Objet du signalement" required>
+      <textarea id="memberReportMessage" placeholder="Expliquez l'erreur constatée..." required></textarea>
+      <button class="primary" type="submit">Envoyer le signalement</button>
+      <p id="memberReportMessageStatus"></p>
+    </form>
+    <h4>Mes signalements</h4>
+    <div id="myReportRows">Chargement…</div>
+  </div>
+
+  <div class="card">
+    <h3>ℹ️ Informations du Dahira</h3>
+    <div id="memberDahiraInformation">Chargement…</div>
+  </div>
+
+  <div class="card">
+    <h3>📜 Chartes du Dahira</h3>
+    <div id="memberDahiraCharters">Chargement…</div>
+  </div>
+
+</section>
+</main>
+<div id="authModal" class="modal hidden"><div class="modalbox"><button class="close" onclick="closeAuth()">×</button><h2 id="authTitle">Connexion</h2><form id="authForm"><input id="email" type="email" placeholder="Adresse e-mail" required><input id="password" type="password" placeholder="Mot de passe" required minlength="6"><button class="primary" id="authSubmit">Se connecter</button><p id="authMessage"></p></form><button class="linkbtn" id="switchAuth">Créer un compte gratuit</button></div></div><footer>© 2026 FÉDÉRATION DAHIRA JAZBUL QULOOB — Plateforme gratuite du Dahira</footer>
+<div id="memberFinanceModal" class="modal hidden">
+  <div class="modal-box">
+    <button type="button" class="modal-close" id="closeMemberFinance">×</button>
+    <h2>💰 Suivi des cotisations</h2>
+    <div id="memberFinanceHead"></div>
+    <div class="stats contribution-stats">
+      <div class="stat"><strong id="memberFinanceTotal">0 FCFA</strong><span>Total payé</span></div>
+      <div class="stat"><strong id="memberFinanceCount">0</strong><span>Paiements</span></div>
+      <div class="stat"><strong id="memberFinanceLast">—</strong><span>Dernier paiement</span></div>
+    </div>
+    <div class="member-table-wrap">
+      <table>
+        <thead><tr><th>Mois</th><th>Catégorie</th><th>Montant</th><th>Mode</th><th>Date</th><th>Reçu</th></tr></thead>
+        <tbody id="memberFinanceRows"></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+</body></html>
