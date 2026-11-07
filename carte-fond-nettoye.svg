@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 630">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#07552b"/><stop offset="1" stop-color="#0b8a45"/></linearGradient></defs>
+<rect width="1000" height="630" rx="34" fill="#fff"/>
+<rect x="0" y="0" width="1000" height="125" rx="34" fill="url(#bg)"/>
+<rect x="0" y="92" width="1000" height="33" fill="url(#bg)"/>
+<path d="M0 125 H1000" stroke="#d7b84b" stroke-width="8"/>
+<circle cx="76" cy="62" r="42" fill="#fff" stroke="#d7b84b" stroke-width="5"/>
+<path d="M76 29 L85 54 L111 54 L90 70 L98 96 L76 80 L54 96 L62 70 L41 54 L67 54Z" fill="#d7b84b"/>
+<text x="140" y="58" font-family="Arial,sans-serif" font-size="30" font-weight="bold" fill="#fff">FÉDÉRATION DAHIRA</text>
+<text x="140" y="94" font-family="Arial,sans-serif" font-size="28" font-weight="bold" fill="#f4df8a">JAZBUL QULOOB</text>
+<rect x="46" y="165" width="240" height="300" rx="18" fill="#f0f3f1" stroke="#d7b84b" stroke-width="5"/>
+<rect x="322" y="175" width="620" height="38" rx="8" fill="#eaf1ec"/>
+<rect x="322" y="240" width="560" height="28" rx="7" fill="#f1f4f2"/>
+<rect x="322" y="292" width="560" height="28" rx="7" fill="#f1f4f2"/>
+<rect x="322" y="344" width="560" height="28" rx="7" fill="#f1f4f2"/>
+<rect x="322" y="396" width="560" height="28" rx="7" fill="#f1f4f2"/>
+<rect x="0" y="540" width="1000" height="90" fill="url(#bg)"/>
+<path d="M0 540 H1000" stroke="#d7b84b" stroke-width="8"/>
+<text x="500" y="592" text-anchor="middle" font-family="Arial,sans-serif" font-size="25" font-weight="bold" fill="#fff">CARTE DE MEMBRE</text>
+</svg>
