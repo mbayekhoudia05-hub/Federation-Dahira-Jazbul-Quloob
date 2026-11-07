@@ -358,7 +358,7 @@ function drawPoster(){
 }
 function initPosterGenerator(){
  const form=$('posterForm');if(!form)return;
- const logo=new Image();logo.onload=()=>{if(!posterImages.logo){posterImages.logo=logo;drawPoster()}};logo.src='logo.jpeg';
+ const logo=new Image();logo.onload=()=>{if(!posterImages.logo){posterImages.logo=logo;drawPoster()}};logo.src='logo.svg';
  ['posterTitle','posterSubtitle','posterPlace','posterDate','posterTime'].forEach(id=>$(id)?.addEventListener('input',drawPoster));
  [['posterLogo','logo'],['posterEventPhoto','event'],['posterMaraboutPhoto','marabout']].forEach(([id,key])=>{
   $(id)?.addEventListener('change',async e=>{
@@ -374,7 +374,7 @@ function initPosterGenerator(){
  });
  $('posterResetBtn')?.addEventListener('click',()=>{
   form.reset();posterImages={logo:null,event:null,marabout:null};
-  const img=new Image();img.onload=()=>{posterImages.logo=img;drawPoster()};img.src='logo.jpeg';
+  const img=new Image();img.onload=()=>{posterImages.logo=img;drawPoster()};img.src='logo.svg';
   $('posterMessage').textContent='Formulaire réinitialisé.';drawPoster();
  });
  drawPoster();
@@ -1110,7 +1110,7 @@ async function loadMembers(){
   if(!cr.error)for(const c of cr.data||[])commissionNames[c.id]=c.name;
   $('totalMemberCount').textContent=String(rows.length);
   $('memberCount').textContent=String(rows.filter(x=>x.status==='active').length);
-  box.innerHTML=rows.length?rows.map(x=>'<tr><td><strong>'+esc(x.member_number)+'</strong></td><td><div class="member-mini"><img src="'+esc(x.photo_url||'logo.jpeg')+'" alt=""><span>'+esc(x.first_name)+' '+esc(x.last_name)+'</span></div></td><td>'+esc(commissionNames[x.commission_id]||'Non affecté')+'</td><td>'+esc(x.phone||'—')+'</td><td>'+esc(x.membership_date||'—')+'</td><td><span class="status '+(x.status==='active'?'active':'inactive')+'">'+(x.status==='active'?'Actif':'Inactif')+'</span></td><td><button class="table-btn" data-action="edit-member" data-id="'+esc(x.id)+'">Modifier</button> <button class="table-btn" data-action="show-member-card" data-id="'+esc(x.id)+'">Voir carte</button> <button class="table-btn" data-action="toggle-member-status" data-status="'+esc(x.status||'active')+'" data-id="'+esc(x.id)+'">'+(x.status==='active'?'Désactiver':'Réactiver')+'</button> <button class="table-btn danger-btn" data-action="delete-member" data-id="'+esc(x.id)+'">Supprimer</button></td></tr>').join(''):'<tr><td colspan="7">Aucun membre enregistré dans la base.</td></tr>';
+  box.innerHTML=rows.length?rows.map(x=>'<tr><td><strong>'+esc(x.member_number)+'</strong></td><td><div class="member-mini"><img src="'+esc(x.photo_url||'logo.svg')+'" alt=""><span>'+esc(x.first_name)+' '+esc(x.last_name)+'</span></div></td><td>'+esc(commissionNames[x.commission_id]||'Non affecté')+'</td><td>'+esc(x.phone||'—')+'</td><td>'+esc(x.membership_date||'—')+'</td><td><span class="status '+(x.status==='active'?'active':'inactive')+'">'+(x.status==='active'?'Actif':'Inactif')+'</span></td><td><button class="table-btn" data-action="edit-member" data-id="'+esc(x.id)+'">Modifier</button> <button class="table-btn" data-action="show-member-card" data-id="'+esc(x.id)+'">Voir carte</button> <button class="table-btn" data-action="toggle-member-status" data-status="'+esc(x.status||'active')+'" data-id="'+esc(x.id)+'">'+(x.status==='active'?'Désactiver':'Réactiver')+'</button> <button class="table-btn danger-btn" data-action="delete-member" data-id="'+esc(x.id)+'">Supprimer</button></td></tr>').join(''):'<tr><td colspan="7">Aucun membre enregistré dans la base.</td></tr>';
   msg('memberMessage',rows.length+' membre(s) chargé(s).'+(cr.error?' Les commissions n’ont pas pu être récupérées : '+cr.error.message:''),!cr.error);
  }catch(err){
   box.innerHTML='<tr><td colspan="7">Erreur inattendue : '+esc(err?.message||String(err))+'</td></tr>';
@@ -1201,7 +1201,7 @@ async function handlePublicMember(){
 
   $('publicMemberBox').innerHTML=`
     <div class="verify-organization"><strong>DAHIRA JAZBUL QULOUB</strong><span>CELLULE DAKAR</span></div>
-    <img src="${esc(m.photo_url||'logo.jpeg')}" alt="Photo">
+    <img src="${esc(m.photo_url||'logo.svg')}" alt="Photo">
     <h3>${esc(m.first_name)} ${esc(m.last_name)}</h3>
     <p><b>N° membre :</b> ${esc(m.member_number)}</p>
     <p><b>Commission :</b> ${esc(m.commission_name||'Aucune commission')}</p>
@@ -1222,7 +1222,7 @@ function memberCardPrintMarkup(m){
  card.classList.add('print-card-copy');
  const commission=m.commissions?.name||'Aucune commission';
  const role=m.commissions?.responsible_member_id===m.id?'Président':(m.commissions?.successor_member_id===m.id?'Vice-président':(m.commission_id?'Membre de la commission':'—'));
- card.querySelector('.card-background').src='carte-fond-nettoye.jpg';
+ card.querySelector('.card-background').src='carte-fond-nettoye.svg';
  const memberPhoto=card.querySelector('.card-photo');memberPhoto.src=m.photo_url||'';memberPhoto.style.display=m.photo_url?'block':'none';
  card.querySelector('.card-info h3').textContent=(m.first_name+' '+m.last_name).trim();
  const values=[m.member_number,m.phone||'Non renseigné',commission,role,m.commissions?.description||'—',formatMemberCardDate(m.membership_date),m.status==='active'?'ACTIF':'INACTIF'];
@@ -1295,10 +1295,10 @@ html,body{margin:0!important;padding:0!important;width:100%!important;background
 #memberCard .print-sheet .card-body{position:relative!important;display:grid!important;flex:1 1 auto!important;grid-template-columns:27% minmax(0,1fr)!important;grid-template-rows:1fr!important;gap:4%!important;align-items:start!important;width:100%!important;min-height:0!important;padding:3% 4% 12%!important;overflow:hidden!important}
 #memberCard .print-sheet .card-photo-frame{position:relative!important;grid-column:1!important;grid-row:1!important;width:100%!important;aspect-ratio:.72!important;border:1.5px solid #d8b653!important;border-radius:5px!important;background:#fff!important;box-shadow:0 2px 6px rgba(6,59,32,.14)!important;overflow:hidden!important;display:flex!important;align-items:center!important;justify-content:center!important;margin-top:5px!important}
 #memberCard .print-sheet .card-photo{width:100%!important;height:100%!important;object-fit:cover!important;border:0!important;border-radius:0!important;background:#a8d4b7!important}
-#memberCard .print-sheet .card-photo-frame:has(.card-photo[src="logo.jpeg"]) .card-photo{opacity:0!important}
+#memberCard .print-sheet .card-photo-frame:has(.card-photo[src="logo.svg"]) .card-photo{opacity:0!important}
 #memberCard .print-sheet .card-photo[style*="display: none"]{display:none!important}
 #memberCard .print-sheet .card-photo-placeholder{display:block!important;position:absolute!important;color:#fff!important;font-size:12px!important;font-weight:800!important;pointer-events:none!important}
-#memberCard .print-sheet .card-photo-frame:not(:has(.card-photo[src="logo.jpeg"])) .card-photo-placeholder{display:none!important}
+#memberCard .print-sheet .card-photo-frame:not(:has(.card-photo[src="logo.svg"])) .card-photo-placeholder{display:none!important}
 #memberCard .print-sheet .card-info{grid-column:2!important;grid-row:1!important;min-width:0!important;padding:0!important;color:#075b35!important;text-align:left!important}
 #memberCard .print-sheet .card-info h3{font-size:10.5px!important;line-height:1.05!important;font-weight:900!important;color:#050505!important;border-bottom:2px dashed #111!important;padding:0 0 3px!important;margin:0 0 5px!important}
 #memberCard .print-sheet .card-info p{font-size:6.1px!important;line-height:1.35!important;font-weight:700!important;margin:3px 0!important;padding:0!important;color:#075b35!important;white-space:normal!important;overflow-wrap:anywhere!important}
