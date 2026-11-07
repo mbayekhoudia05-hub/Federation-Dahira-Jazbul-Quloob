@@ -1222,7 +1222,6 @@ function memberCardPrintMarkup(m){
  card.classList.add('print-card-copy');
  const commission=m.commissions?.name||'Aucune commission';
  const role=m.commissions?.responsible_member_id===m.id?'Président':(m.commissions?.successor_member_id===m.id?'Vice-président':(m.commission_id?'Membre de la commission':'—'));
- card.querySelector('.card-background').src='carte-fond-nettoye.jpg';
  const memberPhoto=card.querySelector('.card-photo');memberPhoto.src=m.photo_url||'';memberPhoto.style.display=m.photo_url?'block':'none';
  card.querySelector('.card-info h3').textContent=(m.first_name+' '+m.last_name).trim();
  const values=[m.member_number,m.phone||'Non renseigné',commission,role,m.commissions?.description||'—',formatMemberCardDate(m.membership_date),m.status==='active'?'ACTIF':'INACTIF'];
@@ -1412,6 +1411,34 @@ html,body{margin:0!important;padding:0!important;width:100%!important;background
  display:block!important;width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;
  object-fit:contain!important;image-rendering:pixelated!important;
 }
+
+
+/* IMPRESSION : ancien format simple vert uni, carte horizontale */
+@page{size:A4 portrait;margin:10mm}
+.print-sheet{display:grid!important;grid-template-columns:repeat(2,90mm)!important;grid-auto-rows:54mm!important;gap:4mm!important;align-content:center!important;justify-content:center!important;width:100%!important;height:277mm!important;min-height:277mm!important;margin:0!important;padding:0!important;break-after:page!important;page-break-after:always!important}
+.print-sheet:last-child{break-after:auto!important;page-break-after:auto!important}
+#memberCard .print-sheet .member-card{
+ position:relative!important;display:flex!important;flex-direction:column!important;gap:0!important;
+ width:90mm!important;height:54mm!important;min-width:90mm!important;min-height:54mm!important;
+ max-width:90mm!important;max-height:54mm!important;margin:0!important;padding:2.5mm!important;
+ overflow:hidden!important;border:0!important;border-radius:0!important;background:#075c2d!important;
+ color:#fff!important;box-shadow:none!important;aspect-ratio:auto!important;break-inside:avoid!important;
+ -webkit-print-color-adjust:exact!important;print-color-adjust:exact!important;
+}
+#memberCard .print-sheet .member-card:before,#memberCard .print-sheet .member-card:after{display:none!important;content:none!important}
+#memberCard .print-sheet .card-top{position:relative!important;display:flex!important;flex:0 0 10mm!important;flex-direction:row!important;align-items:center!important;justify-content:flex-start!important;gap:3mm!important;width:100%!important;height:10mm!important;min-height:10mm!important;padding:0 0 2mm!important;margin:0!important;border:0!important;border-bottom:0.3mm solid #ffffff66!important;background:transparent!important;color:#fff!important;text-align:left!important}
+#memberCard .print-sheet .card-top img{position:static!important;display:block!important;width:9mm!important;height:9mm!important;min-width:9mm!important;max-width:9mm!important;object-fit:cover!important;border:0.4mm solid #fff!important;border-radius:50%!important;padding:0!important;margin:0!important}
+#memberCard .print-sheet .card-top strong{display:block!important;color:#fff!important;font-size:8pt!important;line-height:1.1!important}
+#memberCard .print-sheet .card-top small{display:block!important;color:#fff!important;font-size:5.5pt!important;margin-top:1mm!important;padding:0!important;border:0!important;background:transparent!important}
+#memberCard .print-sheet .card-body{position:relative!important;display:grid!important;flex:1 1 auto!important;grid-template-columns:17mm minmax(0,1fr) 18mm!important;grid-template-rows:1fr!important;gap:2mm!important;align-items:center!important;width:100%!important;min-height:0!important;padding:2mm 0!important;margin:0!important;overflow:hidden!important;background:transparent!important}
+#memberCard .print-sheet .card-photo{display:block!important;position:static!important;grid-column:1!important;grid-row:1!important;width:16mm!important;height:21mm!important;min-width:16mm!important;max-width:16mm!important;object-fit:cover!important;margin:0!important;padding:0!important;border:0.4mm solid #fff!important;border-radius:0!important;background:#fff!important}
+#memberCard .print-sheet .card-info{position:static!important;display:block!important;grid-column:2!important;grid-row:1!important;width:auto!important;height:auto!important;min-width:0!important;max-width:none!important;margin:0!important;padding:0!important;overflow:hidden!important;color:#fff!important;text-align:left!important;background:transparent!important}
+#memberCard .print-sheet .card-info h3{margin:0 0 1mm!important;padding:0 0 1mm!important;border-bottom:0.2mm solid #ffffff66!important;color:#fff!important;font-size:8pt!important;line-height:1.1!important;overflow-wrap:anywhere!important}
+#memberCard .print-sheet .card-info p{margin:.7mm 0!important;padding:0!important;color:#fff!important;font-size:5.5pt!important;font-weight:500!important;line-height:1.2!important;white-space:normal!important;overflow-wrap:anywhere!important}
+#memberCard .print-sheet .card-info p b{color:#fff!important;font-weight:800!important}
+#memberCard .print-sheet .qrcode{position:static!important;display:flex!important;grid-column:3!important;grid-row:1!important;justify-self:center!important;align-self:center!important;width:16mm!important;height:16mm!important;min-width:16mm!important;max-width:16mm!important;min-height:16mm!important;max-height:16mm!important;margin:0!important;padding:1mm!important;overflow:hidden!important;align-items:center!important;justify-content:center!important;background:#fff!important;border:0!important;border-radius:0!important}
+#memberCard .print-sheet .qrcode img,#memberCard .print-sheet .qrcode canvas{display:block!important;width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;object-fit:contain!important}
+#memberCard .print-sheet .card-bottom{display:block!important;position:relative!important;flex:0 0 4mm!important;width:100%!important;height:4mm!important;min-height:4mm!important;margin:0!important;padding:1mm 0 0!important;border:0!important;border-top:.2mm solid #ffffff66!important;color:#fff!important;text-align:center!important;font-size:5pt!important;line-height:1.1!important;background:transparent!important;opacity:1!important}
 
 </style></head><body><main id="memberCard">${cards}</main><script>
 window.addEventListener('load',()=>{const imgs=[...document.images];Promise.all(imgs.map(img=>img.complete?Promise.resolve():new Promise(resolve=>{img.addEventListener('load',resolve,{once:true});img.addEventListener('error',resolve,{once:true})}))).then(()=>setTimeout(()=>window.print(),700))});
