@@ -2131,3 +2131,18 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,te
   #memberCard .member-card .qrcode{width:44px!important;height:44px!important;min-width:44px!important;min-height:44px!important;max-width:44px!important;max-height:44px!important}
   #memberCard .member-card .card-bottom{font-size:6px!important}
 }
+
+
+/* LEGERE AUGMENTATION DE LA TAILLE DES TEXTES DE LA CARTE */
+#memberCard .member-card .card-top strong{font-size:clamp(12px,1.95vw,19px)!important}
+#memberCard .member-card .card-top small{font-size:10px!important}
+#memberCard .member-card .card-info h3{font-size:clamp(13px,1.95vw,20px)!important}
+#memberCard .member-card .card-info p{font-size:clamp(9px,1.2vw,12px)!important;line-height:1.25!important}
+#memberCard .member-card .card-bottom{font-size:10px!important}
+@media(max-width:520px){
+ #memberCard .member-card .card-top strong{font-size:10.5px!important}
+ #memberCard .member-card .card-top small{font-size:7.5px!important}
+ #memberCard .member-card .card-info h3{font-size:11px!important}
+ #memberCard .member-card .card-info p{font-size:7.5px!important;line-height:1.15!important}
+ #memberCard .member-card .card-bottom{font-size:7px!important}
+}
