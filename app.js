@@ -1222,7 +1222,7 @@ function memberCardPrintMarkup(m){
  card.classList.add('print-card-copy');
  const commission=m.commissions?.name||'Aucune commission';
  const role=m.commissions?.responsible_member_id===m.id?'Président':(m.commissions?.successor_member_id===m.id?'Vice-président':(m.commission_id?'Membre de la commission':'—'));
- card.querySelector('.card-background').src='carte-fond-nettoye.svg';
+ card.querySelector('.card-background').src='carte-fond-nettoye.jpg';
  const memberPhoto=card.querySelector('.card-photo');memberPhoto.src=m.photo_url||'';memberPhoto.style.display=m.photo_url?'block':'none';
  card.querySelector('.card-info h3').textContent=(m.first_name+' '+m.last_name).trim();
  const values=[m.member_number,m.phone||'Non renseigné',commission,role,m.commissions?.description||'—',formatMemberCardDate(m.membership_date),m.status==='active'?'ACTIF':'INACTIF'];
