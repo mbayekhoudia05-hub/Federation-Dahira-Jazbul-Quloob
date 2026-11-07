@@ -1,0 +1,1753 @@
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;color:#12261a;background:#f5f8f6}header{height:72px;background:#075c2d;color:#fff;display:flex;align-items:center;padding:0 6%;position:sticky;top:0;z-index:5}.brand{display:flex;gap:10px;align-items:center;color:#fff;text-decoration:none;margin-right:auto}.brand img{width:48px;height:48px;border-radius:50%;object-fit:cover}.brand b,.brand small{display:block}.brand b{font-size:13px}.brand small{font-size:10px;opacity:.8}nav{display:flex;gap:15px;align-items:center}nav a{color:#fff;text-decoration:none;font-weight:600;font-size:14px}nav button{background:transparent;border:1px solid #fff8;color:#fff;border-radius:7px;padding:9px 12px;font-weight:700}.hero{min-height:520px;background:linear-gradient(135deg,#064b25,#0a7c3d);color:#fff;padding:65px 8%;display:flex;align-items:center;justify-content:space-between;gap:30px}.hero h1{font-size:50px;max-width:700px}.hero em{color:#e3c65b;font-style:normal}.hero p{font-size:18px;line-height:1.6;max-width:650px}.badge{background:#e1c255;color:#17351f;padding:7px 12px;border-radius:20px;font-size:11px;font-weight:800}.hero-logo{width:300px;height:300px;border-radius:50%;object-fit:cover}.primary{background:#e1c255;color:#17351f;border:0;border-radius:8px;padding:12px 18px;font-weight:800;cursor:pointer}.secondary{background:#fff;border:1px solid #075c2d;color:#075c2d;border-radius:8px;padding:11px 17px;font-weight:800;cursor:pointer}.section{padding:65px 8%}.alt{background:#eaf4ed}.head{text-align:center;margin-bottom:30px}.head span{font-size:11px;color:#08733a;font-weight:800;letter-spacing:2px}.head h2{font-size:32px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:#fff;border:1px solid #dde8df;border-radius:14px;padding:22px;box-shadow:0 5px 18px #073b1b12}.card h3{margin:10px 0}.card p{color:#617066;line-height:1.5}.tag{background:#e7f3eb;color:#075c2d;padding:5px 9px;border-radius:15px;font-size:11px;font-weight:800}.card a{color:#075c2d;font-weight:800}.loading{text-align:center;grid-column:1/-1}.section form{max-width:650px;margin:auto;background:#fff;padding:25px;border-radius:14px;display:grid;gap:14px}.section label{display:grid;gap:6px;font-weight:700}.section input,.section textarea,.section select,.modalbox input{padding:11px;border:1px solid #ccd9d0;border-radius:7px;font:inherit}.hidden{display:none!important}.modal{position:fixed;inset:0;background:#0008;display:grid;place-items:center;z-index:20;padding:20px}.modalbox{background:#fff;width:min(420px,100%);border-radius:15px;padding:28px;position:relative}.modalbox form{display:grid;gap:12px}.close{position:absolute;right:14px;top:8px;border:0;background:none;font-size:28px}.linkbtn{border:0;background:none;color:#075c2d;font-weight:700;cursor:pointer;margin-top:10px}footer{background:#063b20;color:#fff;text-align:center;padding:30px}.stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;max-width:650px;margin:0 auto 24px}.stat{background:#fff;border:1px solid #dde8df;border-radius:14px;padding:22px;text-align:center;box-shadow:0 5px 18px #073b1b12}.stat strong{display:block;font-size:34px;color:#075c2d}.stat span{color:#617066}.member-form{max-width:760px!important}.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}.member-table-wrap{max-width:1100px;margin:25px auto 0;overflow:auto;background:#fff;border:1px solid #dde8df;border-radius:14px}.member-table-wrap table{width:100%;border-collapse:collapse;min-width:760px}.member-table-wrap th,.member-table-wrap td{padding:13px 15px;text-align:left;border-bottom:1px solid #e7eee9}.member-table-wrap th{background:#075c2d;color:#fff;font-size:13px}.member-table-wrap td{font-size:14px}.status{display:inline-block;padding:4px 9px;border-radius:12px;font-size:11px;font-weight:800}.status.active{background:#e4f5e9;color:#08733a}.status.inactive{background:#f4e7e7;color:#a52d2d}.table-btn{border:1px solid #075c2d;background:#fff;color:#075c2d;border-radius:6px;padding:6px 9px;font-weight:700;cursor:pointer}.member-card{width:min(720px,100%);margin:auto;background:linear-gradient(135deg,#075c2d,#0a7c3d);color:#fff;border-radius:20px;padding:22px;box-shadow:0 15px 35px #063b2040}.card-top{display:flex;align-items:center;gap:12px;border-bottom:1px solid #ffffff44;padding-bottom:14px}.card-top img{width:52px;height:52px;border-radius:50%;object-fit:cover}.card-top strong,.card-top small{display:block}.card-top small{opacity:.8;margin-top:4px}.card-body{display:grid;grid-template-columns:110px 1fr 120px;gap:20px;align-items:center;padding:24px 0}.card-photo{width:110px;height:130px;object-fit:cover;border-radius:10px;background:#fff}.card-info h3{margin:0 0 12px;font-size:24px}.card-info p{margin:7px 0}.qrcode{background:#fff;padding:8px;border-radius:8px;width:120px;height:120px;display:grid;place-items:center}.qrcode img{max-width:100%;max-height:100%}.card-bottom{border-top:1px solid #ffffff44;padding-top:12px;font-size:12px;opacity:.85}.card-actions{display:flex;justify-content:center;gap:12px;margin-top:18px}.verify-box{max-width:600px;margin:auto;background:#fff;border:1px solid #dde8df;border-radius:14px;padding:25px;text-align:center}.verify-box img{width:110px;height:130px;object-fit:cover;border-radius:10px}.verify-ok{color:#08733a;font-weight:800}.verify-no{color:#a52d2d;font-weight:800}@media(max-width:800px){.hero{flex-direction:column;text-align:center}.hero h1{font-size:40px}.hero-logo{width:220px;height:220px}.grid{grid-template-columns:1fr 1fr}nav a{display:none}.card-body{grid-template-columns:90px 1fr}.qrcode{grid-column:1/-1}.card-photo{width:90px;height:110px}}@media(max-width:600px){.grid,.form-row,.stats{grid-template-columns:1fr}.hero{padding:50px 6%}.section{padding:50px 6%}.card-body{grid-template-columns:1fr;text-align:center}.card-photo{margin:auto}.card-info{text-align:center}.qrcode{margin:auto}.card-actions{flex-direction:column}}/* Ancienne impression intégrée retirée : les cartes sont imprimées dans une fenêtre dédiée. */
+
+.member-mini{display:flex;align-items:center;gap:9px}.member-mini img{width:38px;height:38px;border-radius:50%;object-fit:cover;border:2px solid #e1eee5}.photo-upload-label{border:1px dashed #87ad95;padding:14px;border-radius:10px;background:#f7fbf8}.photo-upload-label input{margin-top:6px}.photo-upload-label small{font-weight:400;color:#617066;line-height:1.4}.photo-preview{display:flex;align-items:center;gap:14px;background:#f0f7f2;border:1px solid #d6e6da;border-radius:10px;padding:12px}.photo-preview img{width:75px;height:90px;object-fit:cover;border-radius:8px}.photo-preview strong,.photo-preview span{display:block}.photo-preview span{font-size:12px;color:#617066;margin-top:5px;word-break:break-all}.verify-box{box-shadow:0 8px 25px #073b1b12}.verify-box img{border:3px solid #e1c255}.verify-badge{display:inline-block;background:#e4f5e9;color:#08733a;border-radius:20px;padding:7px 12px;font-weight:800;margin:10px 0}.verify-meta{display:grid;gap:6px;text-align:left;max-width:360px;margin:15px auto}.verify-meta p{margin:0;padding:9px;background:#f5f8f6;border-radius:7px}
+
+.contribution-stats{grid-template-columns:repeat(4,minmax(0,1fr));max-width:1100px}
+.danger-btn{border-color:#a52d2d;color:#a52d2d}
+@media(max-width:900px){.contribution-stats{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.contribution-stats{grid-template-columns:1fr}}
+
+.button-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}.button-row button{width:auto}.table-btn{margin:2px 3px}
+
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.55);display:flex;align-items:center;justify-content:center;padding:20px;z-index:9999}
+.modal.hidden{display:none}
+.modal-box{background:#fff;width:min(900px,100%);max-height:90vh;overflow:auto;border-radius:16px;padding:24px;position:relative;box-shadow:0 20px 60px rgba(0,0,0,.25)}
+.modal-close{position:absolute;right:14px;top:10px;border:0;background:transparent;font-size:30px;cursor:pointer}
+
+.status-pill{display:inline-block;padding:5px 9px;border-radius:999px;font-size:12px;font-weight:700}.paid-pill{background:#e8f7ee;color:#176b3a}.unpaid-pill{background:#fff0f0;color:#a12626}
+
+.status-pill{background:#f1f1f1;color:#555}.form-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}@media(max-width:700px){.form-row{grid-template-columns:1fr}}
+
+.danger-btn{border:1px solid #c33!important;color:#a12626!important;background:#fff!important}.table-btn{white-space:nowrap}
+
+.payment-status-field{
+  border:2px solid #e1c255!important;
+  border-radius:10px;
+  padding:12px!important;
+  background:#fffdf2;
+}
+.payment-status-field select{
+  font-weight:800;
+  font-size:15px;
+}
+.payment-status-field small{
+  color:#617066;
+  font-weight:500;
+  line-height:1.4;
+}
+.pending-pill{
+  background:#fff7d6;
+  color:#8a6500;
+  border:1px solid #e1c255;
+}
+/* Consignes de paiement Wave et Orange Money */
+.payment-instructions {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 16px 0;
+  padding: 16px;
+  border: 1px solid #d6e4f0;
+  border-radius: 12px;
+  background: #f4f8fc;
+  color: #1f2937;
+}
+
+.payment-instructions h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.payment-instructions p {
+  margin: 8px 0;
+  line-height: 1.5;
+}
+
+
+
+/* DJQ VISUAL REFRESH V15 */
+:root{--djq-green:#075b35;--djq-deep:#063d27;--djq-leaf:#0b8150;--djq-gold:#d8b653;--djq-cream:#fbfaf5;--djq-ink:#173126;--djq-muted:#68796f;--djq-line:#e3eae4;--djq-shadow:0 18px 45px rgba(8,55,33,.09)}
+html{scroll-behavior:smooth;scroll-padding-top:88px}
+body{font-family:Inter,"Segoe UI",Arial,sans-serif;color:var(--djq-ink);background:var(--djq-cream);line-height:1.6}
+header{height:auto;min-height:78px;padding:12px clamp(18px,5vw,76px);background:rgba(255,255,255,.96);color:var(--djq-green);border-bottom:1px solid rgba(7,91,53,.1);box-shadow:0 5px 24px rgba(10,50,30,.05);backdrop-filter:blur(12px)}
+.brand{color:var(--djq-green);gap:13px}.brand img{width:52px;height:52px;border:2px solid #e9d99e;padding:2px}.brand b{font-size:14px;letter-spacing:.7px}.brand small{font-size:11px;color:var(--djq-muted);opacity:1;margin-top:2px}
+nav{gap:clamp(8px,1.4vw,20px);flex-wrap:wrap;justify-content:flex-end}nav a{color:var(--djq-green);font-size:13px;font-weight:700;transition:color .2s}nav a:hover{color:var(--djq-leaf)}nav button{border:1px solid #d8e5dc;color:var(--djq-green);border-radius:999px;padding:10px 17px;background:#fff;cursor:pointer}nav button#loginBtn{background:var(--djq-green);border-color:var(--djq-green);color:#fff}
+.hero{position:relative;isolation:isolate;overflow:hidden;min-height:570px;padding:clamp(55px,8vw,105px) clamp(22px,8vw,120px);background:radial-gradient(circle at 78% 22%,rgba(216,182,83,.22),transparent 27%),linear-gradient(125deg,#052f20 0%,#075b35 55%,#0a7547 100%);gap:clamp(28px,6vw,90px)}
+.hero:before{content:"";position:absolute;z-index:-1;width:520px;height:520px;border:1px solid rgba(255,255,255,.12);border-radius:50%;right:7%;top:5%;box-shadow:0 0 0 45px rgba(255,255,255,.025),0 0 0 90px rgba(255,255,255,.02)}
+.hero>div{max-width:720px}.hero .badge{display:inline-flex;background:rgba(229,201,119,.16);border:1px solid rgba(229,201,119,.55);color:#f2d98e;padding:9px 15px;letter-spacing:1.4px}
+.hero h1{font-size:clamp(38px,5.3vw,66px);line-height:1.08;letter-spacing:-1.8px;margin:24px 0 18px}.hero h1 em{color:#efd27d}.hero p{font-size:clamp(16px,1.5vw,19px);color:rgba(255,255,255,.82);line-height:1.8;max-width:600px}
+.hero-logo{width:clamp(210px,25vw,330px);height:clamp(210px,25vw,330px);border:8px solid rgba(255,255,255,.13);padding:7px;background:#fff;box-shadow:0 24px 70px rgba(0,0,0,.28)}
+.primary,.secondary{border-radius:999px;padding:13px 23px;transition:transform .2s,box-shadow .2s,background .2s}.primary{background:linear-gradient(135deg,#ecd17f,#d2ad49);color:#193b29;box-shadow:0 8px 22px rgba(0,0,0,.13)}.primary:hover,.secondary:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.12)}.secondary{border-color:#b8d2c1;color:var(--djq-green)}
+.section{padding:clamp(48px,6vw,82px) clamp(18px,8vw,120px)}.alt{background:linear-gradient(180deg,#f0f6f1,#eaf2eb)}
+.head{max-width:780px;margin:0 auto 38px}.head span{display:inline-block;color:var(--djq-leaf);letter-spacing:2.2px;font-size:11px}.head h2{color:var(--djq-deep);font-size:clamp(27px,3.4vw,39px);letter-spacing:-.8px;margin:9px 0 10px}.head p{color:var(--djq-muted)}
+.grid{gap:22px}.card,.stat,.verify-box{border:1px solid var(--djq-line);border-radius:18px;box-shadow:var(--djq-shadow)}.card{padding:25px;background:rgba(255,255,255,.96);transition:transform .22s,box-shadow .22s,border-color .22s}.card:hover{transform:translateY(-5px);box-shadow:0 22px 45px rgba(8,55,33,.13);border-color:#c4d9ca}.card h3{color:var(--djq-deep);font-size:19px}.card p{color:var(--djq-muted);line-height:1.7}.tag{background:#edf5ef;color:var(--djq-green);border:1px solid #dcebe0}
+.section form{border:1px solid var(--djq-line);border-radius:18px;box-shadow:var(--djq-shadow);padding:clamp(20px,3vw,32px)}.section label{color:#284b38;font-size:14px}.section input,.section textarea,.section select,.modalbox input{border:1px solid #d7e2d9;border-radius:10px;background:#fff;min-height:44px;outline:none;transition:border-color .2s,box-shadow .2s}.section input:focus,.section textarea:focus,.section select:focus,.modalbox input:focus{border-color:#58a77a;box-shadow:0 0 0 3px rgba(11,129,80,.1)}
+.stats{gap:16px}.stat{padding:23px;background:linear-gradient(145deg,#fff,#f7faf7)}.stat strong{color:var(--djq-green);font-size:clamp(27px,3vw,36px)}.stat span{font-size:13px;color:var(--djq-muted)}
+.member-table-wrap,.table-wrap{border:1px solid var(--djq-line);border-radius:16px;box-shadow:var(--djq-shadow);background:#fff}.member-table-wrap th,.table-wrap th{background:var(--djq-green);color:#fff;letter-spacing:.2px}.member-table-wrap td,.table-wrap td{border-bottom:1px solid #edf1ed}.member-table-wrap tr:last-child td,.table-wrap tr:last-child td{border-bottom:0}.table-btn{border-radius:999px;padding:7px 12px}.status,.status-pill{border-radius:999px}
+footer{background:linear-gradient(120deg,#052f20,#075b35);padding:38px 20px;color:rgba(255,255,255,.88)}
+.modalbox,.modal-box{border:1px solid var(--djq-line);border-radius:20px;box-shadow:0 25px 80px rgba(0,0,0,.25)}
+.member-card{box-shadow:0 22px 55px rgba(6,61,39,.28)}
+@media(max-width:800px){header{align-items:flex-start;gap:10px;flex-wrap:wrap}nav{width:100%;justify-content:center;padding:6px 0 2px}nav a{display:inline-block;font-size:12px}.hero{min-height:auto}.hero:before{right:-35%;top:10%}}
+@media(max-width:600px){.brand{margin:0 auto 4px}nav{gap:7px 12px}nav button{padding:8px 12px;font-size:12px}.hero{padding:48px 22px}.hero h1{font-size:39px}.hero-logo{width:190px;height:190px}.section{padding:48px 18px}.head{margin-bottom:28px}.card{padding:20px}.section form{padding:20px}.member-table-wrap{border-radius:12px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+
+
+/* DJQ V16 COLLAPSIBLE LEFT SIDEBAR */
+:root{--sidebar-width:270px;--sidebar-mini:78px}
+body{padding-left:var(--sidebar-width);transition:padding-left .25s ease}
+.app-sidebar{position:fixed;z-index:1001;inset:0 auto 0 0;width:var(--sidebar-width);height:100dvh;padding:24px 16px 18px;background:linear-gradient(180deg,#063d27,#075b35 72%,#06452c);color:#fff;display:flex;flex-direction:column;gap:12px;box-shadow:8px 0 32px rgba(4,40,24,.15);overflow-x:hidden;overflow-y:auto;transition:width .25s ease,transform .25s ease}
+.app-sidebar .brand{margin:0 0 18px;padding:4px 7px;color:#fff;min-width:230px}
+.app-sidebar .brand img{width:48px;height:48px;flex:0 0 48px;border:2px solid #e9d99e}
+.app-sidebar .brand b{color:#fff;font-size:12px;white-space:nowrap}
+.app-sidebar .brand small{color:#d3e7da;white-space:nowrap}
+.sidebar-caption{padding:8px 12px 4px;color:#c0d9ca;font-size:10px;font-weight:800;letter-spacing:1.7px;white-space:nowrap}
+.app-sidebar nav{display:flex;flex-direction:column;align-items:stretch;gap:5px;width:100%}
+.app-sidebar nav a{display:flex;align-items:center;gap:14px;min-height:46px;padding:10px 13px;border:1px solid transparent;border-radius:11px;color:#eff8f1;text-decoration:none;font-size:14px;font-weight:650;white-space:nowrap;transition:background .18s,border-color .18s}
+.app-sidebar nav a:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.13);color:#fff}
+.app-sidebar nav a:first-child{background:rgba(255,255,255,.12)}
+.app-sidebar nav a>span{overflow:hidden;text-overflow:ellipsis}
+.sidebar-account{margin-top:auto;padding:14px 4px 0;border-top:1px solid rgba(255,255,255,.18)}
+.sidebar-account button{width:100%;min-height:43px;border-radius:10px;border:1px solid rgba(255,255,255,.5);background:#fff;color:#075b35;font-weight:800;cursor:pointer}
+.sidebar-account button#logoutBtn{background:transparent;color:#fff}
+.topbar{position:sticky;top:0;z-index:40;height:68px;min-height:68px;margin:0 0 0 calc(-1 * var(--sidebar-width));width:calc(100% + var(--sidebar-width));padding:0 25px;display:flex;align-items:center;justify-content:flex-start;gap:16px;background:rgba(255,255,255,.94);color:#173126;border:0;border-bottom:1px solid #e3eae4;box-shadow:0 5px 22px rgba(8,55,33,.06);backdrop-filter:blur(12px)}
+.sidebar-toggle{width:42px;height:42px;display:grid;place-items:center;border:1px solid #dce8df;border-radius:11px;background:#f5faf6;color:#075b35;font-size:21px;cursor:pointer}
+.topbar-title strong,.topbar-title small{display:block}.topbar-title strong{font-size:14px;color:#063d27}.topbar-title small{font-size:11px;color:#68796f}
+body.sidebar-collapsed{padding-left:var(--sidebar-mini)}
+body.sidebar-collapsed .app-sidebar{width:var(--sidebar-mini);padding-left:12px;padding-right:12px}
+body.sidebar-collapsed .app-sidebar .brand{min-width:0;justify-content:center;padding:0;margin:0 0 18px}
+body.sidebar-collapsed .app-sidebar .brand img{width:48px;height:48px}
+body.sidebar-collapsed .app-sidebar .brand span,
+body.sidebar-collapsed .sidebar-caption,
+body.sidebar-collapsed .app-sidebar nav a>span,
+body.sidebar-collapsed .sidebar-account button{display:none}
+body.sidebar-collapsed .app-sidebar nav a{justify-content:center;padding:10px 4px;font-size:18px}
+body.sidebar-collapsed .sidebar-account{min-height:10px}
+body.sidebar-collapsed .topbar{margin-left:calc(-1 * var(--sidebar-mini));width:calc(100% + var(--sidebar-mini))}
+.sidebar-backdrop{display:none}
+@media(max-width:800px){
+ body{padding-left:0}
+ .app-sidebar{width:min(290px,84vw);transform:translateX(-105%);box-shadow:12px 0 40px rgba(0,0,0,.2)}
+ body.sidebar-mobile-open .app-sidebar{transform:translateX(0)}
+ body.sidebar-mobile-open .sidebar-backdrop{display:block;position:fixed;z-index:1000;inset:0;background:rgba(0,0,0,.42)}
+ .topbar,body.sidebar-collapsed .topbar{margin-left:0;width:100%;height:62px;min-height:62px;padding:0 16px}
+ body.sidebar-collapsed .app-sidebar{width:min(290px,84vw);padding:24px 16px 18px}
+ body.sidebar-collapsed .app-sidebar .brand{min-width:230px;justify-content:flex-start;margin:0 0 18px}
+ body.sidebar-collapsed .app-sidebar .brand span,
+ body.sidebar-collapsed .sidebar-caption,
+ body.sidebar-collapsed .app-sidebar nav a>span,
+ body.sidebar-collapsed .sidebar-account button{display:initial}
+ body.sidebar-collapsed .app-sidebar nav a{justify-content:flex-start;padding:10px 13px;font-size:14px}
+ body.sidebar-collapsed .sidebar-account button{width:100%}
+}
+@media(prefers-reduced-motion:reduce){body,.app-sidebar{transition:none}}
+
+.app-sidebar nav a.active{background:rgba(255,255,255,.18);border-color:rgba(255,255,255,.25);color:#fff;box-shadow:inset 3px 0 0 #e6cc70}.app-sidebar nav a.active:first-child{background:rgba(255,255,255,.18)}#adminDashboard .stats{max-width:1100px;grid-template-columns:repeat(4,minmax(0,1fr))}#adminDashboard .stat{min-height:112px;display:flex;flex-direction:column;justify-content:center;gap:8px}@media(max-width:800px){#adminDashboard .stats{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:520px){#adminDashboard .stats{grid-template-columns:1fr}}
+
+/* DJQ: public Dahira information/charters and content editing */
+.content-admin-list{max-width:1000px;margin:20px auto;display:grid;gap:12px}.content-admin-row{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;padding:18px 20px;background:#fff;border:1px solid var(--djq-line,#e3eae4);border-radius:14px;box-shadow:var(--djq-shadow,0 8px 24px #063d2710)}.content-admin-row h3{margin:5px 0;color:var(--djq-deep,#063d27)}.content-admin-row p{margin:5px 0;color:var(--djq-muted,#68796f);white-space:pre-wrap;overflow-wrap:anywhere}.content-admin-actions{display:flex;gap:8px;flex-shrink:0;flex-wrap:wrap}.content-admin-list-head{margin-top:42px;margin-bottom:18px}.content-admin-row .tag{display:inline-block}@media(max-width:600px){.content-admin-row{flex-direction:column}.content-admin-actions{width:100%}}
+
+.pdf-upload-label{display:block;border:1px dashed #87ad95;padding:14px;border-radius:10px;background:#f7fbf8}.pdf-upload-label input{display:block;margin-top:8px}.pdf-upload-label small,.pdf-current-info{display:block;color:#617066;font-size:12px;margin-top:7px}.pdf-link{display:inline-block;margin:6px 0;padding:9px 13px;border-radius:8px;background:#edf6ef;color:#07552d;font-weight:700;text-decoration:none}.pdf-link:hover{text-decoration:underline}
+
+
+/* Lecture intégrée des chartes PDF dans l'espace membre */
+.member-charter{margin:16px 0;padding:18px;border:1px solid var(--djq-line,#e3eae4);border-radius:14px;background:#fff}
+.member-charter h4{margin:0 0 8px;color:var(--djq-deep,#063d27)}
+.charter-pdf-actions{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0}
+.charter-pdf-actions a{display:inline-flex;align-items:center;justify-content:center;padding:10px 14px;border-radius:9px;text-decoration:none;font-weight:750}
+.charter-pdf-actions .pdf-link{margin:0;background:#edf6ef;color:#07552d}
+.charter-pdf-actions .pdf-download{background:#075b35;color:#fff}
+.charter-pdf-viewer{display:block;width:100%;height: min(78vh,820px);min-height:480px;border:1px solid #dce7df;border-radius:10px;background:#f4f7f4;margin-top:12px}
+@media(max-width:600px){.charter-pdf-viewer{height:65vh;min-height:420px}.charter-pdf-actions{flex-direction:column}.charter-pdf-actions a{width:100%;box-sizing:border-box}}
+
+/* Lecture du règlement intérieur en texte intégral */
+.charter-full-text{margin:18px 0;padding:22px 24px;border:1px solid #dce7df;border-left:4px solid #075b35;border-radius:12px;background:#fbfdfb;color:#26352b;font:inherit;line-height:1.85;white-space:pre-wrap;overflow-wrap:anywhere;}
+#charterText{min-height:320px;line-height:1.65;font-family:inherit;}
+@media(max-width:600px){.charter-full-text{padding:15px;font-size:14px;line-height:1.75}}
+
+
+/* Compteur des demandes d'adhésion en attente */
+.request-count{display:inline-flex;align-items:center;justify-content:center;min-width:20px;height:20px;padding:0 6px;border-radius:999px;background:#b42318;color:#fff;font-size:12px;font-weight:700;line-height:1;}
+
+/* Générateur d'affiches */
+.poster-maker-grid{display:grid;grid-template-columns:minmax(280px,.9fr) minmax(320px,1.1fr);gap:22px;align-items:start}
+.poster-controls{display:grid;gap:13px}
+.poster-controls h3{margin:8px 0 0;color:#075c2d}
+.poster-controls label{display:grid;gap:7px;font-weight:700;font-size:14px}
+.poster-controls input{width:100%;padding:11px;border:1px solid #d5e0d8;border-radius:8px;font:inherit;background:#fff}
+.poster-controls small{font-weight:400;color:#64756a;line-height:1.4}
+.poster-fields-two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.poster-preview-card{position:sticky;top:18px}
+.poster-preview-card canvas{display:block;width:min(100%,540px);height:auto;margin:14px auto 0;border-radius:10px;box-shadow:0 8px 28px #102d1d2b;background:#063c25}
+#posterMessage{min-height:20px;color:#075c2d}
+@media(max-width:850px){.poster-maker-grid{grid-template-columns:1fr}.poster-preview-card{position:static}}
+
+
+/* DJQ MEMBER CARD — design inspired by the supplied green-and-white physical card */
+#memberCard .head{margin-bottom:18px}
+.member-card{
+  position:relative;isolation:isolate;overflow:hidden;
+  width:min(100%,940px);min-height:420px;margin:0 auto;
+  box-sizing:border-box;padding:24px 28px 20px;
+  color:#153a29;background:linear-gradient(110deg,#fff 0%,#fff 72%,#f0f7f1 100%);
+  border:2px solid #0b7041;border-radius:8px;
+  box-shadow:0 16px 38px rgba(6,61,39,.2);
+}
+.member-card:before{
+  content:"";position:absolute;z-index:-1;left:-70px;bottom:-125px;
+  width:310px;height:260px;border-radius:50% 50% 0 0;
+  background:linear-gradient(145deg,#0a7945,#06472d);
+  transform:rotate(-15deg);
+}
+.member-card:after{
+  content:"";position:absolute;z-index:-1;right:-78px;top:-105px;
+  width:250px;height:230px;border-radius:50%;
+  background:linear-gradient(145deg,#dcefe1,#7ebc91);
+  border:1px solid rgba(7,91,53,.25);
+}
+.member-card .card-top{
+  position:relative;min-height:72px;display:flex;align-items:center;
+  justify-content:center;gap:14px;padding:0 125px 14px 10px;
+  border-bottom:0;text-align:center;color:#075b35;
+}
+.member-card .card-top img{
+  position:absolute;right:4px;top:0;width:92px;height:92px;
+  object-fit:contain;border-radius:50%;padding:4px;
+  background:#fff;border:3px solid #d8b653;
+}
+.member-card .card-top strong{
+  display:block;font-size:clamp(19px,3vw,29px);line-height:1.1;
+  letter-spacing:.5px;font-weight:900;
+}
+.member-card .card-top small{
+  display:inline-block;margin-top:7px;padding:4px 12px;
+  border:1px solid #8eb49b;color:#075b35;background:#f8fcf8;
+  font-size:12px;font-weight:800;letter-spacing:.3px;
+}
+.member-card .card-body{
+  display:grid;grid-template-columns:142px minmax(0,1fr) 104px;
+  gap:18px;align-items:center;padding:14px 0 18px;
+}
+.member-card .card-photo{
+  width:116px;height:116px;justify-self:center;align-self:start;
+  border-radius:50%;object-fit:cover;background:#fff;
+  border:4px solid #e2f0e5;outline:2px solid #238452;
+  box-shadow:0 4px 12px #063d2724;
+}
+.member-card .card-info{min-width:0;overflow-wrap:anywhere}
+.member-card .card-info h3{
+  margin:0 0 12px;padding:0 0 7px;border-bottom:3px dashed #173f2b;
+  color:#14271d;font-size:clamp(21px,3vw,29px);line-height:1.2;
+  text-transform:uppercase;
+}
+.member-card .card-info p{
+  margin:5px 0;padding:4px 8px;border-bottom:1px solid #dbe8de;
+  color:#273b30;font-size:13px;line-height:1.35;
+}
+.member-card .card-info p b{color:#075b35}
+.member-card .qrcode{
+  width:96px;height:96px;box-sizing:border-box;justify-self:center;
+  align-self:end;padding:6px;background:#fff;border:2px solid #0b7041;
+  border-radius:5px;
+}
+.member-card .qrcode img{width:100%;height:100%;object-fit:contain}
+.member-card .card-bottom{
+  position:relative;margin-top:0;padding:10px 12px 10px 155px;
+  border-top:0;background:linear-gradient(90deg,#087642,#0b8a4e);
+  color:#fff;font-size:12px;font-weight:900;letter-spacing:1px;
+  text-align:center;opacity:1;
+}
+.member-card .card-bottom:before{
+  content:"TAKKU LIGUEYAL CHEIKHOUL XADIM";
+  position:absolute;left:0;top:0;bottom:0;width:145px;
+  display:flex;align-items:center;justify-content:center;
+  background:#075b35;color:#f0d98d;border-right:3px dashed #e1c255;
+  font-size:9px;letter-spacing:.2px;
+}
+.card-actions{margin-top:16px}
+@media(max-width:700px){
+  .member-card{padding:16px 14px 14px;min-height:0}
+  .member-card .card-top{padding:0 78px 12px 0;min-height:64px}
+  .member-card .card-top img{width:62px;height:62px;right:0}
+  .member-card .card-top strong{font-size:18px}
+  .member-card .card-top small{font-size:10px;padding:3px 6px}
+  .member-card .card-body{grid-template-columns:86px minmax(0,1fr);gap:12px;padding:12px 0}
+  .member-card .card-photo{width:76px;height:76px}
+  .member-card .card-info h3{font-size:19px}
+  .member-card .card-info p{font-size:12px;padding:3px 5px}
+  .member-card .qrcode{grid-column:1/-1;width:86px;height:86px;justify-self:center}
+  .member-card .card-bottom{padding:9px 8px;text-align:center;font-size:10px;letter-spacing:.4px}
+  .member-card .card-bottom:before{display:none}
+}
+@media print{
+  @page{size:A4 landscape;margin:10mm}
+  body{padding-left:0!important;background:#fff!important}
+  #memberCard{padding:0!important}
+  #memberCard .head,.card-actions,.topbar,.app-sidebar{display:none!important}
+  .member-card{width:100%;max-width:none;min-height:0;box-shadow:none!important;break-inside:avoid;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+
+
+/* Correction selon le modèle imprimé : photo du membre dans le cadre carré vert */
+.member-card .card-photo{
+  width:112px;height:142px;justify-self:center;align-self:center;
+  box-sizing:border-box;object-fit:cover;border-radius:0;
+  background:linear-gradient(145deg,#087642,#06472d);
+  border:7px solid #087642;outline:2px dashed #315b43;outline-offset:3px;
+  box-shadow:none;
+}
+@media(max-width:700px){
+  .member-card .card-photo{
+    width:76px;height:98px;border-width:5px;outline-offset:2px;
+  }
+}
+
+
+
+/* En-tete de carte conforme a l'exemplaire : marabout a gauche, logo a droite */
+.member-card .card-top{
+ position:relative;min-height:116px!important;
+ padding:8px 132px 14px 132px!important;
+ display:flex;align-items:center;justify-content:center;text-align:center;
+}
+.member-card .card-top:before{
+ content:"";position:absolute;left:4px;top:4px;
+ width:104px;height:104px;border-radius:50%;
+ border:4px solid #0b7041;box-shadow:0 0 0 3px #e1c255;
+ background:url("data:image/jpeg;base64,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") center 35%/cover no-repeat;
+}
+.member-card .card-top img{
+ position:absolute;right:4px;top:4px;
+ width:104px!important;height:104px!important;
+ border-radius:50%;object-fit:contain;padding:5px;
+ background:#fff;border:4px solid #d8b653;
+}
+.member-card .card-top strong{font-size:clamp(18px,2.7vw,27px);line-height:1.12}
+.member-card .card-top small{font-size:12px!important}
+.verify-organization{
+ position:relative;display:flex;flex-direction:column;align-items:center;
+ justify-content:center;min-height:116px!important;
+ padding:8px 132px!important;margin:0 0 16px;
+ color:#075b35;border-bottom:1px solid #dbe8de;text-align:center;
+}
+.verify-organization:before{
+ content:"";position:absolute;left:4px;top:4px;width:104px;height:104px;
+ border-radius:50%;border:4px solid #0b7041;box-shadow:0 0 0 3px #e1c255;
+ background:url("data:image/jpeg;base64,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") center 35%/cover no-repeat;
+}
+.verify-organization:after{
+ content:"";position:absolute;right:4px;top:4px;width:104px;height:104px;
+ border-radius:50%;border:4px solid #d8b653;
+ background:#fff url("logo.jpeg") center/contain no-repeat;
+}
+.verify-organization strong{font-size:clamp(16px,2.4vw,22px);line-height:1.2}
+.verify-organization span{font-size:12px;font-weight:800;letter-spacing:1px;margin-top:5px}
+@media(max-width:700px){
+ .member-card .card-top{min-height:78px!important;padding:4px 72px 12px!important}
+ .member-card .card-top:before{width:68px;height:68px;left:0;top:2px}
+ .member-card .card-top img{width:68px!important;height:68px!important;right:0;top:2px}
+ .member-card .card-top strong{font-size:14px}
+ .member-card .card-top small{font-size:9px!important;padding:2px 4px}
+ .verify-organization{min-height:78px!important;padding:6px 72px!important}
+ .verify-organization:before,.verify-organization:after{width:68px;height:68px;top:4px}
+ .verify-organization:before{left:0}.verify-organization:after{right:0}
+ .verify-organization strong{font-size:13px}.verify-organization span{font-size:9px}
+}
+
+
+/* Portrait et logo en grand format 204x204 — photo entiere sans recadrage */
+.member-card .card-top{
+  min-height:224px!important;
+  padding:12px 224px 16px!important;
+  box-sizing:border-box!important;
+}
+.member-card .card-top:before{
+  width:204px!important;height:204px!important;
+  left:4px!important;top:4px!important;
+  background-size:contain!important;
+  background-position:center!important;
+  background-repeat:no-repeat!important;
+  background-color:#fff!important;
+  border-radius:50%!important;
+}
+.member-card .card-top img{
+  width:204px!important;height:204px!important;
+  right:4px!important;top:4px!important;
+  object-fit:contain!important;
+  padding:8px!important;
+  box-sizing:border-box!important;
+  background:#fff!important;
+}
+.member-card .card-top strong{line-height:1.15!important}
+.verify-organization{
+  min-height:224px!important;
+  padding:12px 224px!important;
+  box-sizing:border-box!important;
+}
+.verify-organization:before{
+  width:204px!important;height:204px!important;
+  left:4px!important;top:4px!important;
+  background-size:contain!important;
+  background-position:center!important;
+  background-repeat:no-repeat!important;
+  background-color:#fff!important;
+  border-radius:50%!important;
+}
+.verify-organization:after{
+  width:204px!important;height:204px!important;
+  right:4px!important;top:4px!important;
+  background-size:contain!important;
+  padding:8px!important;
+  box-sizing:border-box!important;
+}
+@media(max-width:760px){
+  .member-card .card-top{
+    min-height:112px!important;padding:6px 104px 10px!important;
+  }
+  .member-card .card-top:before{
+    width:96px!important;height:96px!important;left:2px!important;top:4px!important;
+  }
+  .member-card .card-top img{
+    width:96px!important;height:96px!important;right:2px!important;top:4px!important;
+  }
+  .member-card .card-top strong{font-size:14px!important}
+  .verify-organization{
+    min-height:112px!important;padding:6px 104px!important;
+  }
+  .verify-organization:before,.verify-organization:after{
+    width:96px!important;height:96px!important;top:6px!important;
+  }
+  .verify-organization:before{left:2px!important}
+  .verify-organization:after{right:2px!important}
+}
+
+
+/* FORMAT FINAL DES CARTES MEMBRES : largeur 206,93 px × hauteur 297,64 px */
+#memberCard .member-card,
+#memberCard #printCard{
+  width:206.93px!important;
+  height:297.64px!important;
+  min-height:297.64px!important;
+  max-width:none!important;
+  box-sizing:border-box!important;
+  padding:8px!important;
+  margin:0 auto!important;
+  display:flex!important;
+  flex-direction:column!important;
+  gap:5px!important;
+  overflow:hidden!important;
+  border-radius:7px!important;
+  -webkit-print-color-adjust:exact;
+  print-color-adjust:exact;
+}
+#memberCard .member-card .card-top{
+  flex:0 0 48px!important;
+  min-height:48px!important;
+  height:48px!important;
+  padding:2px 48px!important;
+  box-sizing:border-box!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  overflow:hidden!important;
+}
+#memberCard .member-card .card-top:before,
+#memberCard .member-card .card-top img{
+  width:40px!important;
+  height:40px!important;
+  top:3px!important;
+  box-sizing:border-box!important;
+}
+#memberCard .member-card .card-top:before{left:1px!important}
+#memberCard .member-card .card-top img{right:1px!important;padding:2px!important}
+#memberCard .member-card .card-top strong{
+  font-size:8px!important;
+  line-height:1.15!important;
+  letter-spacing:0!important;
+}
+#memberCard .member-card .card-top small{
+  margin-top:2px!important;
+  padding:2px 3px!important;
+  font-size:6px!important;
+  line-height:1.1!important;
+  letter-spacing:0!important;
+}
+#memberCard .member-card .card-body{
+  flex:1 1 auto!important;
+  min-height:0!important;
+  display:grid!important;
+  grid-template-columns:55px minmax(0,1fr)!important;
+  grid-template-rows:auto 1fr auto!important;
+  gap:4px 6px!important;
+  align-items:start!important;
+  padding:2px 0!important;
+  overflow:hidden!important;
+}
+#memberCard .member-card .card-photo{
+  grid-column:1!important;
+  grid-row:1!important;
+  width:52px!important;
+  height:64px!important;
+  margin:0 auto!important;
+  border-width:3px!important;
+  outline:0!important;
+  object-fit:cover!important;
+}
+#memberCard .member-card .card-info{
+  grid-column:2!important;
+  grid-row:1 / span 2!important;
+  min-width:0!important;
+  overflow:hidden!important;
+}
+#memberCard .member-card .card-info h3{
+  margin:0 0 4px!important;
+  padding:0 0 3px!important;
+  border-bottom-width:1px!important;
+  font-size:10px!important;
+  line-height:1.15!important;
+  overflow-wrap:anywhere!important;
+}
+#memberCard .member-card .card-info p{
+  margin:1px 0!important;
+  padding:2px 2px!important;
+  font-size:6.5px!important;
+  line-height:1.15!important;
+  overflow-wrap:anywhere!important;
+}
+#memberCard .member-card .card-info p b{font-size:6.5px!important}
+#memberCard .member-card .qrcode{
+  grid-column:1 / -1!important;
+  grid-row:3!important;
+  width:52px!important;
+  height:52px!important;
+  justify-self:center!important;
+  align-self:center!important;
+  padding:3px!important;
+  margin:0 auto!important;
+}
+#memberCard .member-card .qrcode img,
+#memberCard .member-card .qrcode canvas{
+  width:100%!important;
+  height:100%!important;
+  max-width:100%!important;
+  max-height:100%!important;
+}
+#memberCard .member-card .card-bottom{
+  flex:0 0 22px!important;
+  min-height:22px!important;
+  margin:0!important;
+  padding:5px 3px!important;
+  font-size:6px!important;
+  line-height:1.2!important;
+  letter-spacing:.2px!important;
+  overflow:hidden!important;
+}
+#memberCard .member-card .card-bottom:before{display:none!important}
+/* Impression dédiée : l'application ne participe plus à l'impression de la carte. */
+@media print{@page{size:A4 portrait;margin:10mm}html,body{margin:0!important;padding:0!important;background:#fff!important}}
+/* Organisation claire des commissions en fiches responsives */
+.commissions-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;max-width:1200px;margin:26px auto 0;align-items:start}
+.commission-card{min-width:0;background:#fff;border:1px solid #e0e9e2;border-radius:18px;padding:22px;box-shadow:0 12px 30px rgba(8,55,33,.07)}
+.commission-card.is-inactive{opacity:.78;background:#f8faf8}
+.commission-card-heading{display:flex;align-items:center;gap:13px;margin-bottom:18px}
+.commission-index{width:42px;height:42px;flex:0 0 42px;display:grid;place-items:center;border-radius:13px;background:#eaf4ed;color:#075b35;font-weight:900}
+.commission-card-heading h3{margin:0;color:#063d27;font-size:19px;line-height:1.25}
+.commission-status{display:inline-block;margin-top:5px;color:#8b5555;font-size:11px;font-weight:800}
+.commission-status.is-active{color:#08733a}
+.commission-description-label{display:block;margin:0 0 6px;color:#284b38;font-size:12px;font-weight:800}
+.commission-card textarea{width:100%;min-height:76px;resize:vertical;padding:11px;border:1px solid #d7e2d9;border-radius:10px;font:inherit;font-size:13px}
+.commission-leadership{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:15px 0}
+.commission-leadership label{display:grid;gap:6px;font-size:12px;font-weight:800;color:#284b38}
+.commission-leadership select{width:100%;min-width:0;padding:9px;border:1px solid #d7e2d9;border-radius:9px;font-size:12px}
+.commission-roster-heading{display:flex;justify-content:space-between;gap:8px;align-items:center;padding-top:14px;border-top:1px solid #edf1ed;font-size:13px}
+.commission-roster-heading strong{color:#063d27}
+.commission-roster-heading span{color:#68796f;font-size:11px}
+.commission-roster-list{list-style:none;padding:0;margin:10px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.commission-roster-list li{display:flex;justify-content:space-between;align-items:center;gap:8px;min-width:0;padding:8px 10px;border-radius:9px;background:#f4f8f5;font-size:12px}
+.commission-roster-list li span{overflow-wrap:anywhere}
+.commission-roster-list li small{flex:0 0 auto;color:#68796f;font-size:10px}
+.commission-empty,.commission-error{padding:14px;border-radius:10px;background:#f5f8f6;color:#68796f;font-size:13px}
+.commission-card-actions{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px;padding-top:13px;border-top:1px solid #edf1ed}
+.commission-card-actions .table-btn{font-size:11px}
+@media(max-width:850px){.commissions-grid{grid-template-columns:1fr}}
+@media(max-width:520px){.commission-card{padding:16px}.commission-leadership{grid-template-columns:1fr}.commission-roster-list{grid-template-columns:1fr}.commission-roster-heading{align-items:flex-start;flex-direction:column}}
+
+
+/* Chartes : lecture sur toute la largeur disponible */
+#dahiraChartersGrid{display:grid;grid-template-columns:minmax(0,1fr);width:100%;max-width:none;gap:22px}
+#dahiraChartersGrid>.card{width:100%;max-width:none;box-sizing:border-box}
+.admin-charter-card{width:100%;max-width:none;box-sizing:border-box}
+.member-charter{width:100%;max-width:none;box-sizing:border-box}
+.charter-full-text{width:100%;max-width:none;box-sizing:border-box}
+.charter-pdf-viewer{width:100%;height:min(82vh,1000px);min-height:600px;display:block;box-sizing:border-box}
+@media(max-width:600px){.charter-pdf-viewer{height:75vh;min-height:480px}}
+
+
+
+/* Charte : largeur maîtrisée, sans débordement sous la barre latérale */
+#dahiraCharters{
+  width:94%;
+  max-width:1180px;
+  margin-left:auto;
+  margin-right:auto;
+  padding:clamp(26px,3vw,42px) clamp(16px,2.5vw,32px);
+  box-sizing:border-box;
+}
+#dahiraCharters .head{max-width:100%;width:100%}
+#dahiraChartersGrid{
+  width:100%;
+  max-width:100%;
+  grid-template-columns:minmax(0,1fr);
+}
+#dahiraChartersGrid>.card{
+  width:100%;
+  max-width:100%;
+  min-width:0;
+  padding:clamp(16px,2vw,28px);
+  box-sizing:border-box;
+}
+#dahiraChartersGrid .charter-full-text,
+#dahiraChartersGrid .charter-pdf-viewer{width:100%;max-width:100%}
+@media(max-width:800px){
+  #dahiraCharters{width:100%;padding:28px 12px}
+}
+
+
+/* Gestion des cotisations : hiérarchie visuelle et filtres */
+#contributions .head{margin-bottom:22px}
+#contributions .contribution-stats{margin:0 auto 24px}
+#contributions #contributionForm{margin:0 auto 28px;max-width:1120px}
+#contributions #contributionForm h3{margin-top:0}
+.contribution-history{margin-top:26px;padding:clamp(16px,2vw,26px);background:var(--card-bg,#fff);border:1px solid var(--border-color,#e2e8e3);border-radius:16px;box-shadow:0 5px 18px rgba(15,45,25,.05)}
+.history-heading{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:16px;flex-wrap:wrap}
+.history-heading h3{margin:0 0 5px}.history-heading p{margin:0;color:var(--muted,#657268);font-size:.92rem}
+.contribution-filters{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:18px}
+.contribution-filters label{display:flex;flex-direction:column;gap:6px;min-width:0;font-weight:600;font-size:.9rem}
+.contribution-filters input,.contribution-filters select{width:100%;min-width:0;box-sizing:border-box}
+@media(max-width:900px){.contribution-filters{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.contribution-filters{grid-template-columns:1fr}.history-heading button{width:100%}.contribution-history{padding:14px}}
+
+
+/* Organisation harmonisée des espaces Cotisations, Finances et Suivi des paiements */
+#contributions,
+#financeDashboard,
+#unpaidMembers{
+  width:100%;
+  max-width:1600px;
+  margin:0 auto;
+  padding:clamp(28px,4vw,58px) clamp(18px,4vw,56px);
+}
+#contributions .head,
+#financeDashboard .head,
+#unpaidMembers .head{
+  max-width:1000px;
+  margin:0 auto 30px;
+  padding:clamp(20px,3vw,32px);
+  text-align:left;
+  background:linear-gradient(135deg,#ffffff,#f1f7f2);
+  border:1px solid var(--djq-line,#e3eae4);
+  border-radius:18px;
+  box-shadow:0 10px 28px rgba(8,55,33,.06);
+}
+#contributions .head h2,
+#financeDashboard .head h2,
+#unpaidMembers .head h2{
+  margin:7px 0 8px;
+  font-size:clamp(25px,3vw,34px);
+  line-height:1.25;
+}
+#contributions .head p,
+#financeDashboard .head p,
+#unpaidMembers .head p{margin:0;color:var(--djq-muted,#68796f)}
+#contributions .contribution-stats,
+#financeDashboard .contribution-stats,
+#unpaidMembers .contribution-stats{
+  width:100%;
+  max-width:1320px;
+  margin:0 auto 30px;
+  gap:16px;
+}
+#contributions .stat,
+#financeDashboard .stat,
+#unpaidMembers .stat{
+  min-width:0;
+  min-height:112px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  gap:7px;
+  border-radius:16px;
+  padding:clamp(16px,2vw,24px);
+  text-align:left;
+}
+#contributions .stat strong,
+#financeDashboard .stat strong,
+#unpaidMembers .stat strong{
+  font-size:clamp(23px,2.5vw,32px);
+  line-height:1.2;
+  overflow-wrap:anywhere;
+}
+#contributions .stat span,
+#financeDashboard .stat span,
+#unpaidMembers .stat span{font-size:13px;line-height:1.45}
+#contributions #contributionForm,
+#financeDashboard .member-form,
+#unpaidMembers .member-form{
+  width:100%;
+  max-width:1320px;
+  margin:0 auto 28px;
+  padding:clamp(18px,2.5vw,30px);
+  border:1px solid var(--djq-line,#e3eae4);
+  border-radius:18px;
+  box-shadow:0 8px 26px rgba(8,55,33,.055);
+  gap:18px;
+}
+#contributions #contributionForm h3,
+#financeDashboard .member-form h3{margin:0 0 4px;font-size:21px}
+#contributions .form-row,
+#financeDashboard .form-row,
+#unpaidMembers .form-row{align-items:start;gap:16px}
+#contributions .contribution-history{
+  width:100%;
+  max-width:1320px;
+  margin:0 auto;
+  padding:clamp(16px,2.5vw,30px);
+  border-radius:18px;
+}
+#contributions .history-heading{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  margin-bottom:22px;
+}
+#contributions .history-heading h3{margin:0 0 5px;font-size:22px}
+#contributions .history-heading p{margin:0;color:var(--djq-muted,#68796f)}
+#contributions .contribution-filters{
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:16px;
+  margin-bottom:22px;
+}
+#financeDashboard .member-table-wrap,
+#unpaidMembers .member-table-wrap,
+#contributions .member-table-wrap{
+  width:100%;
+  max-width:1320px;
+  margin:0 auto;
+  overflow:auto;
+  border-radius:16px;
+  box-shadow:0 8px 26px rgba(8,55,33,.055);
+}
+#financeDashboard .member-table-wrap table,
+#unpaidMembers .member-table-wrap table,
+#contributions .member-table-wrap table{width:100%;border-collapse:separate;border-spacing:0}
+#financeDashboard .member-table-wrap th,
+#unpaidMembers .member-table-wrap th,
+#contributions .member-table-wrap th{position:sticky;top:0;z-index:1;white-space:nowrap}
+#financeDashboard .member-table-wrap td,
+#unpaidMembers .member-table-wrap td,
+#contributions .member-table-wrap td{vertical-align:middle}
+#financeDashboard .member-table-wrap tbody tr:nth-child(even),
+#unpaidMembers .member-table-wrap tbody tr:nth-child(even),
+#contributions .member-table-wrap tbody tr:nth-child(even){background:#f8fbf8}
+#financeDashboard .member-table-wrap tbody tr:hover,
+#unpaidMembers .member-table-wrap tbody tr:hover,
+#contributions .member-table-wrap tbody tr:hover{background:#edf6ef}
+#financeDashboard .member-table-wrap{margin-top:28px}
+#unpaidMembers .member-table-wrap{margin-top:24px}
+#unpaidMembers .stats{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media(max-width:1000px){
+  #contributions .contribution-filters{grid-template-columns:repeat(2,minmax(0,1fr))}
+  #financeDashboard .contribution-stats{grid-template-columns:repeat(4,minmax(0,1fr))}
+}
+@media(max-width:700px){
+  #contributions,#financeDashboard,#unpaidMembers{padding:24px 14px}
+  #contributions .head,#financeDashboard .head,#unpaidMembers .head{padding:20px;margin-bottom:22px}
+  #contributions .contribution-stats,#financeDashboard .contribution-stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  #unpaidMembers .stats{grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}
+  #contributions .stat,#financeDashboard .stat,#unpaidMembers .stat{min-height:96px;padding:13px}
+  #contributions .history-heading{align-items:stretch;flex-direction:column}
+  #contributions .history-heading button{width:100%}
+  #contributions .contribution-filters{grid-template-columns:1fr}
+  #contributions #contributionForm,#financeDashboard .member-form,#unpaidMembers .member-form{padding:18px}
+  #unpaidMembers .stat strong{font-size:22px}
+}
+@media(max-width:420px){
+  #contributions .contribution-stats,#financeDashboard .contribution-stats{grid-template-columns:1fr}
+  #unpaidMembers .stats{grid-template-columns:1fr}
+}
+
+
+/* DJQ — finitions esthétiques légères, sans modifier la structure ni les fonctions */
+::selection{background:#dcecdf;color:#063d27}
+button,a,input,select,textarea{ -webkit-tap-highlight-color:transparent }
+button,a{transition:color .18s ease,background-color .18s ease,border-color .18s ease,box-shadow .18s ease,transform .18s ease}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid rgba(216,182,83,.72);outline-offset:3px}
+.primary:active,.secondary:active,.table-btn:active{transform:translateY(1px)}
+.app-sidebar nav a{position:relative}
+.app-sidebar nav a:not(.active):hover{transform:translateX(2px)}
+.sidebar-toggle:hover{background:#eaf4ed;border-color:#b9d5c2}
+.topbar-title strong{letter-spacing:.15px}
+.section .head h2{ text-wrap:balance }
+.section .head p{max-width:680px;margin-left:auto;margin-right:auto}
+#dahiraCharters .head p,#contributions .head p,#financeDashboard .head p,#unpaidMembers .head p{margin-left:0;margin-right:0}
+.card a{text-underline-offset:3px}
+.card a:hover{text-decoration-thickness:2px}
+.section form button[type="submit"],.poster-controls button{min-height:44px}
+.section form small,.form-help{line-height:1.6}
+.member-table-wrap tbody tr{transition:background-color .15s ease}
+.member-table-wrap th{font-size:12px;text-transform:uppercase;letter-spacing:.35px}
+.status,.status-pill,.tag{letter-spacing:.1px}
+.request-count{box-shadow:0 0 0 2px #075b35}
+@media(max-width:600px){
+  .section .head h2{line-height:1.2}
+  .section form{gap:13px}
+  .primary,.secondary{max-width:100%}
+}
+@media(prefers-reduced-motion:reduce){
+  button,a,input,select,textarea,.member-table-wrap tbody tr{transition:none!important}
+}
+
+
+/* Finitions ciblées : Cotisations, Finances et Suivi des cotisations */
+#contributions .head,
+#financeDashboard .head,
+#unpaidMembers .head{
+  position:relative;
+  overflow:hidden;
+  border-left:4px solid var(--djq-gold,#d8b653);
+  background:linear-gradient(115deg,#fff 0%,#f4f8f4 72%,#edf5ef 100%);
+}
+#contributions .head:after,
+#financeDashboard .head:after,
+#unpaidMembers .head:after{
+  content:"";
+  position:absolute;
+  width:130px;height:130px;
+  right:-42px;top:-55px;
+  border:1px solid rgba(216,182,83,.25);
+  border-radius:50%;
+  box-shadow:0 0 0 18px rgba(216,182,83,.055),0 0 0 38px rgba(216,182,83,.035);
+  pointer-events:none;
+}
+#contributions .stat,
+#financeDashboard .stat,
+#unpaidMembers .stat{
+  position:relative;
+  overflow:hidden;
+  border-top:3px solid #b9d4c1;
+  background:linear-gradient(155deg,#fff 0%,#f7faf7 100%);
+  box-shadow:0 8px 22px rgba(8,55,33,.055);
+}
+#contributions .stat:nth-child(1),
+#financeDashboard .stat:nth-child(1),
+#unpaidMembers .stat:nth-child(1){border-top-color:#0b8150}
+#contributions .stat:nth-child(2),
+#financeDashboard .stat:nth-child(2),
+#unpaidMembers .stat:nth-child(2){border-top-color:#d8b653}
+#contributions .stat:nth-child(3),
+#financeDashboard .stat:nth-child(3),
+#unpaidMembers .stat:nth-child(3){border-top-color:#7b9eb2}
+#contributions .stat:nth-child(4),
+#financeDashboard .stat:nth-child(4){border-top-color:#bd8a63}
+#contributions .stat strong,
+#financeDashboard .stat strong,
+#unpaidMembers .stat strong{letter-spacing:-.6px}
+#contributions #contributionForm,
+#financeDashboard>.member-form,
+#unpaidMembers>.member-form{
+  position:relative;
+  background:linear-gradient(145deg,#fff,#fbfdfb);
+}
+#contributions #contributionForm h3,
+#financeDashboard>.member-form h3{
+  display:flex;align-items:center;gap:9px;
+  padding-bottom:13px;
+  border-bottom:1px solid #edf1ed;
+  color:var(--djq-deep,#063d27);
+}
+#contributions #contributionForm h3:before{
+  content:"＋";display:grid;place-items:center;
+  width:30px;height:30px;border-radius:9px;
+  background:#eaf4ed;color:#075b35;font-size:20px;
+}
+#contributions .contribution-filters label,
+#financeDashboard>.member-form label,
+#unpaidMembers>.member-form label{color:#365343}
+#contributions .contribution-filters input,
+#contributions .contribution-filters select,
+#financeDashboard>.member-form input,
+#financeDashboard>.member-form select,
+#unpaidMembers>.member-form input{
+  min-height:44px;border-radius:10px;background:#fcfefc;
+}
+#contributions .contribution-history{
+  border:1px solid #dfe9e1;
+  background:linear-gradient(180deg,#fff,#fcfdfc);
+}
+#contributions .history-heading h3{color:var(--djq-deep,#063d27)}
+#contributions .member-table-wrap,
+#financeDashboard>.member-table-wrap,
+#unpaidMembers>.member-table-wrap{
+  border:1px solid #e0e9e2;
+  box-shadow:0 9px 24px rgba(8,55,33,.06);
+}
+#contributions .member-table-wrap th,
+#financeDashboard .member-table-wrap th,
+#unpaidMembers .member-table-wrap th{
+  padding-top:15px;padding-bottom:15px;
+  background:linear-gradient(100deg,#06472d,#087044);
+}
+#contributions .member-table-wrap td,
+#financeDashboard .member-table-wrap td,
+#unpaidMembers .member-table-wrap td{padding-top:13px;padding-bottom:13px}
+#financeDashboard .contribution-stats{grid-template-columns:repeat(4,minmax(0,1fr))}
+#financeDashboard .member-form .button-row{justify-content:flex-end;padding-top:4px}
+#financeDashboard .member-form .button-row button{min-width:145px}
+#unpaidMembers>.member-form{max-width:900px!important;margin-bottom:22px}
+#unpaidMembers .stats{max-width:900px;margin-top:0;margin-bottom:25px}
+#unpaidMembers .stat{text-align:center;align-items:center}
+#unpaidMembers .stat strong{font-variant-numeric:tabular-nums}
+#unpaidMembers .member-table-wrap{margin-top:0}
+@media(max-width:1000px){
+  #financeDashboard .contribution-stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:600px){
+  #financeDashboard .contribution-stats{grid-template-columns:1fr 1fr}
+  #financeDashboard .member-form .button-row{justify-content:stretch}
+  #financeDashboard .member-form .button-row button{flex:1;min-width:0}
+  #unpaidMembers .stats{grid-template-columns:1fr}
+}
+@media(max-width:390px){
+  #financeDashboard .contribution-stats{grid-template-columns:1fr}
+}
+
+
+/* Correctif d'espacement horizontal — Cotisations et Finances */
+#contributions .contribution-stats,
+#financeDashboard .contribution-stats,
+#contributions .form-row,
+#financeDashboard .form-row,
+#financeDashboard .stats,
+#contributions .stats {
+  column-gap:22px !important;
+  row-gap:18px !important;
+}
+#contributions .contribution-stats > *,
+#financeDashboard .contribution-stats > *,
+#contributions .form-row > *,
+#financeDashboard .form-row > *,
+#financeDashboard .stats > *,
+#contributions .stats > * {
+  min-width:0;
+}
+#contributions .contribution-stats .stat,
+#financeDashboard .contribution-stats .stat,
+#financeDashboard .stats .stat,
+#contributions .stats .stat {
+  margin:0;
+}
+@media(max-width:700px){
+  #contributions .contribution-stats,
+  #financeDashboard .contribution-stats,
+  #contributions .form-row,
+  #financeDashboard .form-row,
+  #financeDashboard .stats,
+  #contributions .stats {
+    column-gap:14px !important;
+    row-gap:14px !important;
+  }
+}
+
+/* Correction ciblée : séparation des champs Membre, Mois et Catégorie */
+#contributions #contributionForm > .form-row:first-of-type{
+  display:grid !important;
+  grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+  column-gap:30px !important;
+  row-gap:22px !important;
+  width:100%;
+}
+#contributions #contributionForm > .form-row{
+  width:100%;
+  min-width:0;
+}
+#contributions #contributionForm > .form-row > label{
+  min-width:0;
+  width:100%;
+}
+#contributions #contributionForm > .form-row > label > input,
+#contributions #contributionForm > .form-row > label > select{
+  display:block;
+  width:100%;
+  min-width:0;
+  max-width:100%;
+}
+@media(max-width:900px){
+  #contributions #contributionForm > .form-row:first-of-type{
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    column-gap:22px !important;
+  }
+}
+@media(max-width:560px){
+  #contributions #contributionForm > .form-row:first-of-type{
+    grid-template-columns:minmax(0,1fr) !important;
+    row-gap:16px !important;
+  }
+}
+
+/* Carte membre — modèle graphique vert et blanc, format proportionnel conservé */
+.member-card{position:relative;isolation:isolate;aspect-ratio:863/1241;width:min(720px,100%);height:auto;min-height:0;padding:0!important;overflow:hidden;border-radius:0!important;background:#fafffc!important;color:#075b35!important;box-shadow:0 12px 30px #063b2030!important;display:flex;flex-direction:column;gap:0!important}
+.member-card:before{content:"";position:absolute;z-index:-1;left:-14%;top:-15%;width:128%;height:49%;background:radial-gradient(ellipse at 50% 0%,#168b4f 0%,#08703b 67%,#075b35 100%);border-bottom:5px solid #0b7844;border-radius:0 0 50% 50%/0 0 24% 24%;box-shadow:0 7px 0 #5ab884}
+.member-card:after{content:"";position:absolute;z-index:-1;inset:42% 0 0;background:linear-gradient(135deg,#ffffff 0%,#f8fffb 100%)}
+.member-card .card-top{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;flex:0 0 35%;height:35%;gap:8px;border:0;padding:14px 5% 0;background:transparent;text-align:center}
+.member-card .card-heading{width:92%;display:flex;flex-direction:column;align-items:center;gap:4px}
+.member-card .card-heading strong{font-family:Georgia,'Times New Roman',serif;font-size:clamp(22px,5vw,46px);font-weight:500;line-height:1.05;letter-spacing:1px;color:#fff;text-shadow:0 1px 1px #004b25}
+.member-card .card-heading small{font-family:Arial,sans-serif;font-size:clamp(9px,1.8vw,17px);font-weight:800;line-height:1.15;color:#fff;padding:3px 6px;border:1px solid #ffffff30;background:#086b3a}
+.member-card .card-top img{position:relative;top:auto;right:auto;width:24%;height:auto;aspect-ratio:1;max-width:150px;min-width:0;border-radius:50%;object-fit:cover;border:4px solid #fff;box-shadow:0 0 0 2px #075b35;margin-top:1px}
+.member-card .card-body{position:relative;display:grid;grid-template-columns:27% minmax(0,1fr);gap:4%;align-items:start;flex:1 1 auto;min-height:0;padding:3% 4% 12%}
+.member-card .card-photo-frame{position:relative;grid-column:1;width:100%;aspect-ratio:.72;border:4px dashed #075b35;border-radius:8px;background:#a8d4b7;overflow:hidden;display:flex;align-items:center;justify-content:center;margin-top:8px}
+.member-card .card-photo{width:100%;height:100%;object-fit:cover;border:0;border-radius:0;background:#a8d4b7}
+.member-card .card-photo-frame:has(.card-photo[src="logo.jpeg"]) .card-photo{opacity:0}
+.member-card .card-photo-placeholder{display:block;position:absolute;color:#fff;font-size:clamp(12px,2vw,24px);font-weight:800;pointer-events:none}
+.member-card .card-info{grid-column:2;min-width:0;padding:0;color:#075b35;text-align:left}
+.member-card .card-info h3{font-size:clamp(18px,4vw,42px);line-height:1.05;font-weight:900;color:#050505;border-bottom:3px dashed #111;padding:0 0 4px;margin:0 0 7px;overflow-wrap:anywhere}
+.member-card .card-info p{font-size:clamp(10px,1.8vw,20px);line-height:1.35;font-weight:700;margin:5px 0;overflow-wrap:anywhere}
+.member-card .card-info p b{font-weight:500;text-decoration:underline;text-decoration-color:#aaa;text-underline-offset:2px}
+.member-card .qrcode{display:none!important}
+.member-card .card-bottom{position:absolute;left:4%;right:4%;bottom:3%;height:auto;min-height:0;background:#076333;color:#fff;border:0;padding:10px 5px;text-align:center;font-size:clamp(10px,1.8vw,21px);line-height:1.2;font-weight:900;letter-spacing:0;opacity:1}
+.member-card .card-bottom:after{content:"";display:block;border-bottom:2px solid #fff;margin:2px 4% 0}
+@media(max-width:600px){.member-card .card-body{grid-template-columns:27% minmax(0,1fr);text-align:left;padding-bottom:15%}.member-card .card-info{text-align:left}.member-card .card-info h3{font-size:clamp(14px,4vw,24px)}.member-card .card-info p{font-size:clamp(8px,2.3vw,12px)}.member-card .card-top{flex-basis:35%;height:35%}.member-card .card-heading strong{font-size:clamp(17px,5vw,28px)}.member-card .card-heading small{font-size:clamp(8px,2vw,11px)}}
+
+/* Corrections finales du modèle membre */
+.member-card .card-top{flex:0 0 35%;height:35%;align-items:center;justify-content:flex-start;flex-direction:column}
+.member-card .card-heading{width:100%;align-items:center;text-align:center}
+.member-card .card-top img{position:relative;top:auto;right:auto;display:block;width:24%;height:auto;max-width:150px;aspect-ratio:1;object-fit:contain;border-radius:50%;margin:1px auto 0}
+.member-card .card-photo-placeholder{display:none!important}
+.member-card .card-photo-frame{grid-column:1;grid-row:1;aspect-ratio:.72}
+.member-card .card-info{grid-column:2;grid-row:1 / span 2}
+.member-card .qrcode{display:flex!important;grid-column:1;grid-row:2;justify-self:center;align-self:start;width:38px;height:38px;min-width:38px;min-height:38px;margin:5px 0 0;padding:2px;overflow:hidden;background:#fff;border:1px solid #075b35;border-radius:2px;align-items:center;justify-content:center}
+.member-card .qrcode img{display:block;width:100%;height:100%;object-fit:contain}
+.member-card .card-photo[style*="display: none"]{display:none!important}
+
+
+/* Ajustement strict de la carte selon l'image de référence : seuls les éléments du modèle sont conservés, avec le QR ajouté. */
+.member-card:before{
+  border-bottom:5px solid #0b7844!important;
+  box-shadow:0 7px 0 #55b77d,0 11px 0 #fff,0 15px 0 #168b4f!important;
+}
+.member-card .card-top{
+  flex:0 0 35%!important;height:35%!important;gap:7px!important;padding-top:14px!important;
+}
+.member-card .card-heading{width:92%!important;gap:3px!important}
+.member-card .card-heading strong{
+  font-family:Georgia,'Times New Roman',serif!important;font-size:clamp(22px,5vw,46px)!important;
+  font-weight:500!important;letter-spacing:1px!important;color:#fff!important;
+  -webkit-text-stroke:.45px #fff!important;text-shadow:1px 1px 0 #075b35,-1px -1px 0 #075b35!important;
+}
+.member-card .card-heading small{
+  background:transparent!important;border:1px solid #a6c77b!important;
+  font-size:clamp(9px,1.8vw,17px)!important;padding:3px 7px!important;
+}
+.member-card .card-top img{
+  display:block!important;position:relative!important;inset:auto!important;
+  width:25%!important;max-width:150px!important;height:auto!important;aspect-ratio:1!important;
+  margin:2px auto 0!important;border:4px solid #fff!important;
+  box-shadow:0 0 0 2px #075b35!important;object-fit:cover!important;
+}
+.member-card .card-body{
+  grid-template-columns:27% minmax(0,1fr)!important;
+  grid-template-rows:minmax(0,1fr) auto!important;gap:3.5%!important;
+  align-items:start!important;padding:3% 4% 12%!important;
+  background-image:radial-gradient(ellipse at 70% 60%,rgba(8,105,55,.035),transparent 58%);
+}
+.member-card .card-photo-frame{
+  grid-column:1!important;grid-row:1!important;width:100%!important;
+  aspect-ratio:.72!important;border:4px dashed #075b35!important;
+  border-radius:7px!important;background:#a8d4b7!important;margin-top:8px!important;
+}
+.member-card .card-photo-placeholder{
+  display:block!important;color:#fff!important;font-size:clamp(12px,2vw,24px)!important;
+  font-weight:800!important;letter-spacing:.2px!important;
+}
+.member-card .card-photo-frame:has(.card-photo[style*="display: block"]) .card-photo-placeholder{display:none!important}
+.member-card .card-info{grid-column:2!important;grid-row:1 / span 2!important}
+.member-card .card-info h3{border-bottom:5px dashed #111!important;margin-bottom:9px!important}
+.member-card .card-info p{line-height:1.42!important;margin:6px 0!important}
+.member-card .card-info p b{text-decoration:underline!important;text-decoration-color:#aaa!important;text-underline-offset:3px!important}
+.member-card .qrcode{
+  display:flex!important;grid-column:1!important;grid-row:2!important;
+  justify-self:center!important;align-self:start!important;width:58px!important;height:58px!important;
+  min-width:58px!important;min-height:58px!important;margin:9px 0 0!important;padding:3px!important;
+  background:#fff!important;border:1px solid #075b35!important;border-radius:2px!important;
+}
+.member-card .qrcode img,.member-card .qrcode canvas{display:block!important;width:100%!important;height:100%!important;object-fit:contain!important}
+.member-card .card-bottom{
+  left:4%!important;right:4%!important;bottom:3%!important;
+  background:#076333!important;color:#fff!important;padding:10px 5px!important;
+  font-weight:900!important;text-align:center!important;
+}
+@media(max-width:600px){
+ .member-card .card-body{grid-template-columns:27% minmax(0,1fr)!important;grid-template-rows:minmax(0,1fr) auto!important}
+ .member-card .qrcode{grid-column:1!important;grid-row:2!important}
+ .member-card .card-info{grid-column:2!important;grid-row:1 / span 2!important}
+}
+
+/* DJQ CARTE — demi-cercle supérieur, logo centré et aucune photo ronde parasite */
+.member-card{position:relative!important;isolation:isolate!important;overflow:hidden!important;background:#fbfcf8!important}
+.member-card:before{content:""!important;position:absolute!important;z-index:0!important;left:-20%!important;top:-1%!important;width:140%!important;height:43%!important;background:linear-gradient(145deg,#087e48 0%,#006236 55%,#075b35 100%)!important;border:0!important;border-bottom:5px solid #0a7543!important;border-radius:0 0 50% 50% / 0 0 100% 100%!important;box-shadow:0 6px 0 #fff,0 10px 0 #58b77d,0 14px 0 #fff,0 18px 0 #0b8150!important}
+.member-card:after{content:""!important;position:absolute!important;z-index:0!important;left:0!important;right:0!important;top:36%!important;bottom:0!important;background:linear-gradient(135deg,#fff 0%,#fbfcf8 100%)!important}
+.member-card .card-top{position:relative!important;z-index:3!important;display:flex!important;flex:0 0 37%!important;height:37%!important;min-height:37%!important;flex-direction:column!important;align-items:center!important;justify-content:flex-start!important;gap:5px!important;padding:12px 5% 0!important;background:transparent!important;overflow:visible!important}
+.member-card .card-heading{position:relative!important;z-index:2!important;width:92%!important;display:flex!important;flex-direction:column!important;align-items:center!important;gap:4px!important}
+.member-card .card-heading strong{font-size:clamp(21px,4.8vw,43px)!important;line-height:1.05!important;color:#fff!important;letter-spacing:1.2px!important}
+.member-card .card-heading small{background:transparent!important;border:1px solid #b8d49c!important;color:#fff!important;padding:3px 8px!important;line-height:1.15!important}
+.member-card .card-top img.card-emblem{display:block!important;position:relative!important;z-index:4!important;inset:auto!important;flex:0 0 auto!important;width:18%!important;max-width:104px!important;min-width:0!important;height:auto!important;aspect-ratio:1!important;object-fit:contain!important;margin:2px auto 0!important;padding:2px!important;border:2px solid #fff!important;border-radius:50%!important;background:#fff!important;box-shadow:0 3px 9px rgba(0,0,0,.24)!important}
+.member-card .card-body{position:relative!important;z-index:2!important;display:grid!important;grid-template-columns:27% minmax(0,1fr)!important;grid-template-rows:minmax(0,1fr) auto!important;gap:3.5%!important;align-items:start!important;flex:1 1 auto!important;min-height:0!important;padding:3% 4% 12%!important;background:transparent!important}
+.member-card .card-photo-frame{position:relative!important;z-index:2!important;grid-column:1!important;grid-row:1!important;aspect-ratio:.72!important;border:4px dashed #075b35!important;border-radius:7px!important;background:#a8d4b7!important;overflow:hidden!important}
+.member-card .card-photo{width:100%!important;height:100%!important;object-fit:cover!important;border:0!important;border-radius:0!important;background:#a8d4b7!important}
+.member-card .card-photo-placeholder{display:none!important}
+.member-card .card-info{position:relative!important;z-index:2!important;grid-column:2!important;grid-row:1 / span 2!important;min-width:0!important;color:#075b35!important}
+.member-card .qrcode{position:relative!important;z-index:2!important;display:flex!important;grid-column:1!important;grid-row:2!important;justify-self:center!important;align-self:start!important;width:58px!important;height:58px!important;min-width:58px!important;min-height:58px!important;margin:9px 0 0!important;padding:3px!important;background:#fff!important;border:1px solid #075b35!important;border-radius:2px!important}
+.member-card .card-bottom{position:absolute!important;z-index:4!important;left:4%!important;right:4%!important;bottom:3%!important;background:#076333!important;color:#fff!important;text-align:center!important}
+@media(max-width:600px){.member-card .card-top{flex-basis:37%!important;height:37%!important}.member-card .card-body{grid-template-columns:27% minmax(0,1fr)!important}}
+
+
+/* Suppression définitive du logo/photo rond dans l’en-tête de la carte membre. */
+.member-card .card-top > img{display:none!important}
+.member-card .card-top .card-emblem{display:none!important}
+
+
+/* Correction ciblee : retirer le portrait du marabout integre en pseudo-element a gauche.
+   Le logo officiel reste affiche a droite de l'en-tete. */
+.member-card .card-top::before,
+#memberCard .print-sheet .card-top::before {
+  content: none !important;
+  display: none !important;
+  background: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+.member-card .card-top > img.card-emblem {
+  display: block !important;
+  position: absolute !important;
+  right: 4px !important;
+  top: 4px !important;
+  width: 104px !important;
+  height: 104px !important;
+  min-width: 104px !important;
+  max-width: 104px !important;
+  border-radius: 50% !important;
+  object-fit: contain !important;
+  padding: 5px !important;
+  background: #fff !important;
+  border: 4px solid #d8b653 !important;
+}
+@media (max-width: 700px) {
+  .member-card .card-top > img.card-emblem {
+    right: 0 !important;
+    top: 2px !important;
+    width: 68px !important;
+    height: 68px !important;
+    min-width: 68px !important;
+    max-width: 68px !important;
+  }
+}
+
+
+/* QR code : remonte davantage pour rester entierement au-dessus de la bande verte. */
+.member-card .qrcode {
+  width: 46px !important;
+  height: 46px !important;
+  min-width: 46px !important;
+  min-height: 46px !important;
+  margin: 0 !important;
+  transform: translateY(-18px) !important;
+  padding: 2px !important;
+}
+.member-card .qrcode img,
+.member-card .qrcode canvas {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+}
+
+
+/* APERCU "VOIR MA CARTE" : conserver strictement le format de la carte,
+   mais organiser proprement les elements dans la zone d'affichage a l'ecran. */
+@media screen {
+  #memberCard .member-card,
+  #memberCard #printCard {
+    width:206.93px!important;
+    height:297.64px!important;
+    min-height:297.64px!important;
+    max-width:none!important;
+  }
+  #memberCard .member-card .card-top {
+    flex:0 0 48px!important;
+    height:48px!important;
+    min-height:48px!important;
+  }
+  #memberCard .member-card .card-body {
+    flex:1 1 auto!important;
+    min-height:0!important;
+    grid-template-columns:55px minmax(0,1fr)!important;
+    grid-template-rows:68px minmax(0,1fr)!important;
+    gap:5px 7px!important;
+    align-items:start!important;
+    padding:5px 0 4px!important;
+    overflow:hidden!important;
+  }
+  #memberCard .member-card .card-photo-frame {
+    grid-column:1!important;
+    grid-row:1!important;
+    width:52px!important;
+    height:64px!important;
+    margin:0 auto!important;
+    align-self:start!important;
+  }
+  #memberCard .member-card .card-photo {
+    width:100%!important;
+    height:100%!important;
+    object-fit:cover!important;
+  }
+  #memberCard .member-card .card-info {
+    grid-column:2!important;
+    grid-row:1 / span 2!important;
+    min-width:0!important;
+    overflow:hidden!important;
+    padding:0!important;
+  }
+  #memberCard .member-card .card-info h3 {
+    font-size:10px!important;
+    line-height:1.15!important;
+    margin:0 0 5px!important;
+    padding:0 0 3px!important;
+  }
+  #memberCard .member-card .card-info p,
+  #memberCard .member-card .card-info p b {
+    font-size:6.5px!important;
+    line-height:1.2!important;
+    margin:2px 0!important;
+    padding:1px 0!important;
+  }
+  #memberCard .member-card .qrcode {
+    grid-column:1!important;
+    grid-row:2!important;
+    width:46px!important;
+    height:46px!important;
+    min-width:46px!important;
+    min-height:46px!important;
+    justify-self:center!important;
+    align-self:start!important;
+    margin:3px 0 0!important;
+    transform:none!important;
+  }
+  #memberCard .member-card .card-bottom {
+    flex:0 0 22px!important;
+    min-height:22px!important;
+    height:22px!important;
+  }
+}
+
+
+/* APERCU VOIR MA CARTE : logo ajuste dans l'en-tete sans modifier la carte imprimee. */
+@media screen {
+  #memberCard .member-card .card-top {
+    position:relative!important;
+    padding:5px 5px 0!important;
+    flex:0 0 48px!important;
+    height:48px!important;
+    min-height:48px!important;
+    overflow:hidden!important;
+  }
+  #memberCard .member-card .card-top .card-heading {
+    width:calc(100% - 38px)!important;
+    max-width:calc(100% - 38px)!important;
+    margin-right:38px!important;
+    align-items:center!important;
+    text-align:center!important;
+    gap:2px!important;
+  }
+  #memberCard .member-card .card-top .card-heading strong {
+    font-size:10px!important;
+    line-height:1.05!important;
+    letter-spacing:.3px!important;
+  }
+  #memberCard .member-card .card-top .card-heading small {
+    font-size:5.5px!important;
+    line-height:1.1!important;
+    padding:1px 2px!important;
+  }
+  #memberCard .member-card .card-top > img.card-emblem {
+    display:block!important;
+    position:absolute!important;
+    top:5px!important;
+    right:5px!important;
+    left:auto!important;
+    width:30px!important;
+    height:30px!important;
+    min-width:30px!important;
+    max-width:30px!important;
+    margin:0!important;
+    padding:2px!important;
+    object-fit:contain!important;
+    border:1px solid #d8b653!important;
+    border-radius:50%!important;
+    background:#fff!important;
+    box-shadow:0 1px 3px rgba(0,0,0,.18)!important;
+  }
+}
+
+
+/* Logo de la carte : fond blanc ajuste a l'image, sans pastille ni contour decoratif. */
+.member-card .card-top > img.card-emblem {
+  background-color:#fff!important;
+  border:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+  padding:0!important;
+  object-fit:contain!important;
+}
+@media screen {
+  #memberCard .member-card .card-top > img.card-emblem {
+    background-color:#fff!important;
+    border:0!important;
+    border-radius:0!important;
+    box-shadow:none!important;
+    padding:0!important;
+  }
+}
+
+
+/* Suppression de l'ovale sombre autour du logo : aucun contour, halo ou ombre. */
+.member-card .card-top > img.card-emblem,
+#memberCard .member-card .card-top > img.card-emblem,
+#memberCard .print-sheet .card-top > img.card-emblem {
+  border:0!important;
+  border-radius:0!important;
+  outline:0!important;
+  box-shadow:none!important;
+  filter:none!important;
+  background:#fff!important;
+  padding:0!important;
+}
+
+
+/* Logo carte : neutraliser le fond noir JPEG autour du médaillon sans toucher au dessin. */
+#memberCard .member-card .card-top > img.card-emblem,
+#memberCard .print-sheet .card-top > img.card-emblem {
+  mix-blend-mode:screen!important;
+  background:#fff!important;
+}
+
+
+/* Recadrage du logo : masquer le fond noir JPEG hors du médaillon circulaire.
+   Le cercle argenté/blanc et le dessin intérieur restent visibles. */
+.member-card .card-top > img.card-emblem,
+#memberCard .member-card .card-top > img.card-emblem,
+#memberCard .print-sheet .card-top > img.card-emblem {
+  object-fit:cover!important;
+  object-position:50% 58%!important;
+  border-radius:50%!important;
+  overflow:hidden!important;
+  transform:scale(1.055)!important;
+  mix-blend-mode:normal!important;
+  background:transparent!important;
+  border:0!important;
+  outline:0!important;
+  box-shadow:none!important;
+  padding:0!important;
+}
+
+
+/* APERCU A L'ECRAN : appliquer le meme recadrage du logo que sur la feuille d'impression. */
+@media screen {
+  #memberCard #printCard .card-top > img.card-emblem {
+    width:30px!important;
+    height:30px!important;
+    min-width:30px!important;
+    max-width:30px!important;
+    aspect-ratio:1!important;
+    object-fit:cover!important;
+    object-position:50% 58%!important;
+    clip-path:circle(49% at 50% 50%)!important;
+    border:0!important;
+    border-radius:50%!important;
+    outline:0!important;
+    box-shadow:none!important;
+    padding:0!important;
+    background:transparent!important;
+    mix-blend-mode:normal!important;
+    transform:none!important;
+  }
+}
+
+
+/* Aperçu écran : fond du logo réduit en cercle régulier. */
+@media screen {
+  #memberCard #printCard .card-top > img.card-emblem {
+    width:30px!important;
+    min-width:30px!important;
+    max-width:30px!important;
+    height:30px!important;
+    min-height:30px!important;
+    max-height:30px!important;
+    aspect-ratio:1/1!important;
+    object-fit:cover!important;
+    object-position:50% 58%!important;
+    clip-path:circle(50% at 50% 50%)!important;
+    border-radius:50%!important;
+    overflow:hidden!important;
+    padding:0!important;
+    border:0!important;
+    box-shadow:none!important;
+    transform:none!important;
+  }
+}
+
+
+/* LOGO : supprimer le fond noir du JPEG aussi a l'impression.
+   Le fichier source est vertical : le medaillon occupe environ 72% de sa hauteur,
+   avec son centre a 59%. On conserve donc le medaillon entier dans un cercle.
+   Regle commune ecran/impression pour eviter le rectangle noir a l'impression. */
+.member-card .card-top > img.card-emblem,
+#memberCard #printCard .card-top > img.card-emblem {
+  object-fit:contain!important;
+  object-position:50% 50%!important;
+  clip-path:circle(36% at 50% 59%)!important;
+  -webkit-clip-path:circle(36% at 50% 59%)!important;
+  border:0!important;
+  border-radius:0!important;
+  outline:0!important;
+  box-shadow:none!important;
+  padding:0!important;
+  background:transparent!important;
+  mix-blend-mode:normal!important;
+  transform:none!important;
+}
+@media print {
+  .member-card .card-top > img.card-emblem,
+  #memberCard #printCard .card-top > img.card-emblem {
+    object-fit:contain!important;
+    object-position:50% 50%!important;
+    clip-path:circle(36% at 50% 59%)!important;
+    -webkit-clip-path:circle(36% at 50% 59%)!important;
+    border:0!important;
+    border-radius:0!important;
+    outline:0!important;
+    box-shadow:none!important;
+    padding:0!important;
+    background:transparent!important;
+    mix-blend-mode:normal!important;
+    transform:none!important;
+    -webkit-print-color-adjust:exact;
+    print-color-adjust:exact;
+  }
+}
+
+
+
+/* IMPRESSION : retirer uniquement le liseré blanc ajouté autour du logo. */
+@media print {
+  .member-card .card-top > img.card-emblem,
+  #memberCard .member-card .card-top > img.card-emblem,
+  #memberCard .print-sheet .card-top > img.card-emblem,
+  #memberCard #printCard .card-top > img.card-emblem {
+    border:0!important;
+    outline:0!important;
+    box-shadow:none!important;
+    filter:none!important;
+    padding:0!important;
+  }
+}
+
+
+/* PHOTO DU MEMBRE — cadre sobre et élégant, à l'écran comme à l'impression */
+.member-card .card-photo-frame{
+  border:2px solid #d8b653!important;
+  border-radius:10px!important;
+  outline:0!important;
+  outline-offset:0!important;
+  background:#fff!important;
+  box-shadow:0 3px 10px rgba(6,59,32,.16)!important;
+  overflow:hidden!important;
+}
+.member-card .card-photo-frame .card-photo{
+  border:0!important;
+  border-radius:7px!important;
+  background:#fff!important;
+  box-shadow:none!important;
+}
+
+
+/* PRIORITÉ ABSOLUE — neutraliser les anciens cadres verts de la photo membre */
+#memberCard .member-card .card-photo-frame,
+#printCard .member-card .card-photo-frame,
+.member-card .card-photo-frame{
+  border:2px solid #d8b653!important;
+  outline:0!important;
+  outline-offset:0!important;
+  border-radius:10px!important;
+  background:#fff!important;
+  box-shadow:0 3px 10px rgba(6,59,32,.16)!important;
+}
+#memberCard .member-card .card-photo-frame .card-photo,
+#printCard .member-card .card-photo-frame .card-photo,
+.member-card .card-photo-frame .card-photo{
+  border:0!important;
+  outline:0!important;
+  border-radius:7px!important;
+  background:#fff!important;
+  box-shadow:none!important;
+}
+
+
+/* Carte membre : fond vierge officiel utilisé tel quel, informations superposées. */
+#memberCard .member-card{position:relative!important;isolation:isolate!important;display:block!important;width:min(720px,100%)!important;height:auto!important;aspect-ratio:2/3!important;min-height:0!important;margin:0 auto!important;padding:0!important;overflow:hidden!important;border:0!important;border-radius:0!important;background:transparent!important;box-shadow:0 12px 30px #063b2030!important}
+#memberCard .member-card:before,#memberCard .member-card:after{display:none!important;content:none!important}
+#memberCard .card-background{position:absolute!important;inset:0!important;display:block!important;width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;object-fit:fill!important;margin:0!important;padding:0!important;border:0!important}
+#memberCard .card-photo-frame{position:absolute!important;left:5.2%!important;top:40.1%!important;width:22.5%!important;height:20.1%!important;margin:0!important;padding:0!important;overflow:hidden!important;border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important}
+#memberCard .card-photo{display:block!important;width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;object-fit:cover!important;margin:0!important;padding:0!important;border:0!important;border-radius:0!important;background:transparent!important}
+#memberCard .card-photo[style*="display: none"]{display:none!important}
+#memberCard .card-info{position:absolute!important;left:33.2%!important;top:39.5%!important;width:62.5%!important;height:47%!important;min-width:0!important;margin:0!important;padding:0!important;overflow:hidden!important;color:#075b35!important;text-align:left!important;background:transparent!important}
+#memberCard .card-info h3{margin:0 0 5px!important;padding:0 0 3px!important;border-bottom:1px dashed #075b35!important;color:#111!important;font-size:clamp(9px,1.35vw,16px)!important;font-weight:900!important;line-height:1.15!important;overflow-wrap:anywhere!important;word-break:break-word!important}
+#memberCard .card-info p{margin:3px 0!important;padding:0!important;color:#075b35!important;font-size:clamp(6px,.9vw,11px)!important;font-weight:700!important;line-height:1.28!important;white-space:normal!important;overflow-wrap:anywhere!important;word-break:break-word!important}
+#memberCard .card-info p b{font-weight:700!important;text-decoration:none!important}
+#memberCard .qrcode{position:absolute!important;left:8.2%!important;top:64%!important;display:flex!important;width:18%!important;max-width:64px!important;aspect-ratio:1!important;height:auto!important;min-width:0!important;min-height:0!important;margin:0!important;padding:2px!important;overflow:hidden!important;align-items:center!important;justify-content:center!important;background:#fff!important;border:1px solid #075b35!important;border-radius:2px!important}
+#memberCard .qrcode img{display:block!important;width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;object-fit:contain!important}
+#memberCard .card-top,#memberCard .card-body,#memberCard .card-bottom{display:none!important}
+
+
+/* Correction photo membre sur la plateforme : alignement et cadre vert */
+#memberCard .card-photo-frame,
+#printCard .card-photo-frame,
+.member-card .card-photo-frame{
+  box-sizing:border-box!important;
+  border:2px solid #087642!important;
+  outline:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  overflow:hidden!important;
+}
+#memberCard .card-photo-frame .card-photo,
+#printCard .card-photo-frame .card-photo,
+.member-card .card-photo-frame .card-photo{
+  display:block!important;
+  width:100%!important;
+  height:100%!important;
+  object-fit:cover!important;
+  object-position:center center!important;
+  margin:0!important;
+  padding:0!important;
+  border:0!important;
+  outline:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+}
+
+
+/* RECADRAGE FINAL PHOTO MEMBRE : zoom léger pour couvrir toute l'ouverture
+   de la carte importée, sans modifier le fond ni les autres éléments. */
+#memberCard .card-photo-frame,
+#printCard .card-photo-frame,
+.member-card .card-photo-frame {
+  overflow:hidden!important;
+  border:2px solid #087642!important;
+  box-sizing:border-box!important;
+}
+#memberCard .card-photo-frame .card-photo,
+#printCard .card-photo-frame .card-photo,
+.member-card .card-photo-frame .card-photo {
+  display:block!important;
+  width:100%!important;
+  height:100%!important;
+  object-fit:cover!important;
+  object-position:50% 50%!important;
+  transform:scale(1.12)!important;
+  transform-origin:50% 50%!important;
+}
+
+
+/* Ajustement réel de la photo sur le fond importé :
+   la zone photo du visuel occupe environ x=3.8%, y=39%, l=25.5%, h=22%.
+   On recouvre entièrement l'ancien cadre imprimé pour éviter les bandes visibles. */
+#memberCard #printCard .card-photo-frame,
+#memberCard .card-photo-frame,
+#printCard .card-photo-frame,
+.member-card .card-photo-frame{
+  position:absolute!important;
+  left:2.5%!important;
+  top:40%!important;
+  width:26.8%!important;
+  height:24.1%!important;
+  margin:0!important;
+  padding:0!important;
+  box-sizing:border-box!important;
+  overflow:hidden!important;
+  border:1.5px solid #087642!important;
+  outline:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+}
+#memberCard #printCard .card-photo-frame .card-photo,
+#memberCard .card-photo-frame .card-photo,
+#printCard .card-photo-frame .card-photo,
+.member-card .card-photo-frame .card-photo{
+  display:block!important;
+  width:100%!important;
+  height:100%!important;
+  max-width:none!important;
+  max-height:none!important;
+  object-fit:cover!important;
+  object-position:50% 50%!important;
+  transform:none!important;
+  margin:0!important;
+  padding:0!important;
+  border:0!important;
+  outline:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+}
+
+
+/* Nettoyage du visuel importé : masque uniquement l'ancien cadre pointillé « NATAL ».
+   Le fond original reste intact; la photo du membre est superposée au-dessus. */
+#memberCard .card-photo-cleanup,
+#printCard .card-photo-cleanup,
+.member-card .card-photo-cleanup {
+  position:absolute!important; left:2.5%!important; top:40%!important;
+  width:26.8%!important; height:24.1%!important; margin:0!important; padding:0!important;
+  background:#fbfcf8!important; border:0!important; outline:0!important;
+  box-shadow:none!important; z-index:1!important; pointer-events:none!important;
+}
+#memberCard .card-photo-frame,
+#printCard .card-photo-frame,
+.member-card .card-photo-frame {z-index:2!important}
+#memberCard .card-info,#printCard .card-info,.member-card .card-info,
+#memberCard .qrcode,#printCard .qrcode,.member-card .qrcode {z-index:2!important}
+#memberCard .print-sheet .card-photo-cleanup {
+  left:2.5%!important; top:40%!important; width:26.8%!important; height:24.1%!important;
+  background:#fbfcf8!important; z-index:1!important;
+}
+#memberCard .print-sheet .card-photo-frame {z-index:2!important}
+
+
+/* FIX DEFINITIF : supprimer le cadre imprimé NATAL sans toucher au fichier image */
+#memberCard .card-photo-cleanup,
+#printCard .card-photo-cleanup,
+.member-card .card-photo-cleanup {
+  position:absolute!important;
+  left:3.1%!important;
+  top:38.6%!important;
+  width:26.0%!important;
+  height:23.0%!important;
+  margin:0!important;
+  padding:0!important;
+  background:#fbfcf8!important;
+  border:0!important;
+  outline:0!important;
+  box-shadow:none!important;
+  z-index:5!important;
+  pointer-events:none!important;
+}
+#memberCard .card-photo-frame,
+#printCard .card-photo-frame,
+.member-card .card-photo-frame {
+  position:absolute!important;
+  left:3.1%!important;
+  top:38.6%!important;
+  width:26.0%!important;
+  height:23.0%!important;
+  box-sizing:border-box!important;
+  overflow:hidden!important;
+  border:0!important;
+  outline:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  z-index:6!important;
+}
+#memberCard .card-photo-frame .card-photo,
+#printCard .card-photo-frame .card-photo,
+.member-card .card-photo-frame .card-photo {
+  display:block!important;width:100%!important;height:100%!important;
+  max-width:none!important;max-height:none!important;object-fit:cover!important;
+  object-position:center!important;transform:none!important;
+  margin:0!important;padding:0!important;border:0!important;outline:0!important;
+  border-radius:0!important;background:transparent!important;box-shadow:none!important;
+}
+#memberCard .card-photo-cleanup {pointer-events:none!important}
+@media print {
+  #memberCard .card-photo-cleanup,
+  #memberCard .card-photo-frame,
+  #printCard .card-photo-cleanup,
+  #printCard .card-photo-frame { -webkit-print-color-adjust:exact!important; print-color-adjust:exact!important; }
+}
+
+
+/* CORRECTION FINALE CARTE MEMBRE — zone photo sans cadre ni libellé NATAL */
+.member-card{position:relative!important;isolation:isolate!important}
+.member-card .card-background{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:fill!important;z-index:0!important}
+.member-card .card-photo-cleanup{
+  position:absolute!important;left:3.25%!important;top:38.45%!important;
+  width:26.1%!important;height:28.7%!important;margin:0!important;padding:0!important;
+  background:#fff!important;border:0!important;outline:0!important;border-radius:0!important;
+  box-shadow:none!important;z-index:4!important;display:block!important;pointer-events:none!important;
+}
+.member-card .card-photo-frame{
+  position:absolute!important;left:3.25%!important;top:38.45%!important;
+  width:26.1%!important;height:26%!important;margin:0!important;padding:0!important;
+  box-sizing:border-box!important;overflow:hidden!important;background:transparent!important;
+  border:0!important;outline:0!important;border-radius:0!important;box-shadow:none!important;z-index:5!important;
+}
+.member-card .card-photo-frame .card-photo{
+  display:block!important;width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;
+  margin:0!important;padding:0!important;object-fit:cover!important;object-position:center!important;
+  border:0!important;outline:0!important;border-radius:0!important;background:transparent!important;
+  box-shadow:none!important;transform:none!important;
+}
+.member-card .card-info,.member-card .qrcode{z-index:6!important}
+@media print{
+  .member-card .card-photo-cleanup,.member-card .card-photo-frame{
+    -webkit-print-color-adjust:exact!important;print-color-adjust:exact!important;
+  }
+}
+
+
+/* QR CODE : centre en bas de la carte, avec une marge de securite avant la bande verte. */
+.member-card .qrcode{
+  position:absolute!important;
+  left:50%!important;
+  right:auto!important;
+  top:auto!important;
+  bottom:14%!important;
+  width:46px!important;
+  height:46px!important;
+  min-width:46px!important;
+  min-height:46px!important;
+  margin:0!important;
+  padding:2px!important;
+  transform:translateX(-50%)!important;
+  z-index:7!important;
+}
+.member-card .qrcode img,
+.member-card .qrcode canvas{
+  display:block!important;
+  width:100%!important;
+  height:100%!important;
+  object-fit:contain!important;
+}
+
+
+/* QR CODE : format reduit et position legerement plus basse. */
+.member-card .qrcode{
+  left:50%!important;right:auto!important;top:auto!important;bottom:11%!important;
+  width:16px!important;height:16px!important;min-width:16px!important;min-height:16px!important;
+  max-width:16px!important;max-height:16px!important;margin:0!important;padding:2px!important;
+  transform:translateX(-50%)!important;z-index:7!important;
+}
+.member-card .qrcode img,.member-card .qrcode canvas{
+  width:100%!important;height:100%!important;object-fit:contain!important;
+}
