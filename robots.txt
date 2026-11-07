@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mbayekhoudia05-hub.github.io/Federation-Dahira-Jazbul-Quloob/sitemap.xml
